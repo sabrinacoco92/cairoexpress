@@ -1,0 +1,1127 @@
+<!doctype html>
+<html lang="it" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cairo Express - Hub Viaggio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .title-font {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+        
+        .card-egypt {
+            background: white;
+            transition: all 0.2s ease;
+        }
+        
+        .card-egypt:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        
+        .text-gold {
+            color: #c4954d;
+        }
+        
+        .bg-gold {
+            background: linear-gradient(135deg, #d4a574 0%, #e8d4b8 100%);
+        }
+        
+        .border-gold {
+            border-color: #c4954d;
+        }
+        
+        .hieroglyph-accent {
+            background: linear-gradient(135deg, #c4954d 0%, #d4a574 100%);
+        }
+        
+        .text-primary {
+            color: #3d3020;
+        }
+        
+        .text-secondary {
+            color: #5a4a35;
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full" style="background-color: #f5f0e8;"><!-- Header con immagine -->
+  <div class="w-full mb-6">
+   <div class="relative h-56 md:h-72 overflow-hidden"><img src="https://nbts.it/wp-content/uploads/2020/10/nbts-viaggi-egitto-piramidi-pyramids.jpg" alt="Piramidi di Giza" class="w-full h-full object-cover" onerror="this.src=''; this.alt='Immagine non disponibile'; this.style.display='none';">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-center pb-8">
+     <div class="text-center text-white">
+      <h1 class="text-3xl md:text-4xl font-bold mb-2 title-font" style="color: #faf7f2;">CAIRO EXPRESS 🐪</h1>
+      <div class="flex items-center justify-center gap-3 text-sm" style="color: #faf7f2; opacity: 0.95;"><span>📅 16-20 GENNAIO</span> <span>•</span> <span>🇪🇬 EGITTO</span> <span>•</span> <span>5 giorni / 4 notti</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="container mx-auto px-4 py-4 pb-8"><!-- Countdown -->
+   <div class="mb-8">
+    <div class="card-egypt rounded-xl overflow-hidden max-w-lg mx-auto p-5">
+     <div class="text-center mb-3">
+      <p class="text-sm uppercase tracking-widest text-gold font-semibold title-font">Countdown al Viaggio</p>
+     </div>
+     <div id="countdown" class="flex justify-center gap-2 text-center">
+      <div class="bg-gold rounded p-2 min-w-[55px]">
+       <div id="days" class="text-2xl font-bold text-white title-font">
+        00
+       </div>
+       <div class="text-xs uppercase mt-0.5 text-white font-medium opacity-90">
+        Giorni
+       </div>
+      </div>
+      <div class="bg-gold rounded p-2 min-w-[55px]">
+       <div id="hours" class="text-2xl font-bold text-white title-font">
+        00
+       </div>
+       <div class="text-xs uppercase mt-0.5 text-white font-medium opacity-90">
+        Ore
+       </div>
+      </div>
+      <div class="bg-gold rounded p-2 min-w-[55px]">
+       <div id="minutes" class="text-2xl font-bold text-white title-font">
+        00
+       </div>
+       <div class="text-xs uppercase mt-0.5 text-white font-medium opacity-90">
+        Minuti
+       </div>
+      </div>
+      <div class="bg-gold rounded p-2 min-w-[55px]">
+       <div id="seconds" class="text-2xl font-bold text-white title-font">
+        00
+       </div>
+       <div class="text-xs uppercase mt-0.5 text-white font-medium opacity-90">
+        Secondi
+       </div>
+      </div>
+     </div>
+    </div>
+   </div><!-- Main Grid -->
+   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-8"><!-- Itinerario -->
+    <div class="card-egypt rounded-lg p-3 cursor-pointer" onclick="openSection('itinerario')">
+     <div class="text-center flex flex-col items-center justify-center h-full">
+      <div class="text-3xl mb-1">
+       🗺️
+      </div>
+      <h3 class="text-xs font-semibold title-font" style="color: #4a3f2e;">ITINERARIO</h3>
+     </div>
+    </div><!-- Cosa Portare -->
+    <div class="card-egypt rounded-lg p-3 cursor-pointer" onclick="openSection('cosa-portare')">
+     <div class="text-center flex flex-col items-center justify-center h-full">
+      <div class="text-3xl mb-1">
+       🎒
+      </div>
+      <h3 class="text-xs font-semibold title-font" style="color: #4a3f2e;">COSA PORTARE</h3>
+     </div>
+    </div><!-- Cassa Comune -->
+    <div class="card-egypt rounded-lg p-3 cursor-pointer" onclick="openSection('spese')">
+     <div class="text-center flex flex-col items-center justify-center h-full">
+      <div class="text-3xl mb-1">
+       💰
+      </div>
+      <h3 class="text-xs font-semibold title-font" style="color: #4a3f2e;">CASSA COMUNE</h3>
+     </div>
+    </div><!-- Foto -->
+    <div class="card-egypt rounded-lg p-3 cursor-pointer" onclick="openSection('foto')">
+     <div class="text-center flex flex-col items-center justify-center h-full">
+      <div class="text-3xl mb-1">
+       📸
+      </div>
+      <h3 class="text-xs font-semibold title-font" style="color: #4a3f2e;">FOTO</h3>
+     </div>
+    </div><!-- Info Utili -->
+    <div class="card-egypt rounded-lg p-3 cursor-pointer" onclick="openSection('info-utili')">
+     <div class="text-center flex flex-col items-center justify-center h-full">
+      <div class="text-3xl mb-1">
+       📋
+      </div>
+      <h3 class="text-xs font-semibold title-font" style="color: #4a3f2e;">INFO UTILI</h3>
+     </div>
+    </div><!-- Cultura Egiziana -->
+    <div class="card-egypt rounded-lg p-3 cursor-pointer" onclick="openSection('cultura')">
+     <div class="text-center flex flex-col items-center justify-center h-full">
+      <div class="text-3xl mb-1">
+       🏺
+      </div>
+      <h3 class="text-xs font-semibold title-font" style="color: #4a3f2e;">CULTURA</h3>
+     </div>
+    </div><!-- FAQ -->
+    <div class="card-egypt rounded-lg p-3 cursor-pointer" onclick="openSection('faq')">
+     <div class="text-center flex flex-col items-center justify-center h-full">
+      <div class="text-3xl mb-1">
+       ❓
+      </div>
+      <h3 class="text-xs font-semibold title-font" style="color: #4a3f2e;">FAQ</h3>
+     </div>
+    </div><!-- Emergency -->
+    <div class="card-egypt rounded-lg p-3 cursor-pointer" onclick="openSection('emergency')">
+     <div class="text-center flex flex-col items-center justify-center h-full">
+      <div class="text-3xl mb-1">
+       🚨
+      </div>
+      <h3 class="text-xs font-semibold title-font" style="color: #4a3f2e;">EMERGENCY</h3>
+     </div>
+    </div>
+   </div><!-- Mappa -->
+   <div class="mb-8 max-w-5xl mx-auto">
+    <div class="card-egypt rounded-xl p-4 overflow-hidden">
+     <h3 class="text-sm font-semibold text-primary title-font mb-3 text-center">📍 MAPPA DEL VIAGGIO</h3><iframe src="https://www.google.com/maps/d/embed?mid=1MP2dR-jVFzsyk1riNz1-N2G-8I6ZMio&amp;ehbc=2E312F" width="100%" height="400" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy"></iframe>
+    </div>
+   </div><!-- Link Utili -->
+   <div class="mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mx-auto"><a href="https://www.weroad.it/viaggi/cairo-express" target="_blank" rel="noopener noreferrer" class="card-egypt rounded-xl p-5 hover:scale-105 transition-transform">
+      <div class="flex items-center"><span class="text-3xl mr-4">🐪</span>
+       <div>
+        <h4 class="font-semibold text-primary text-sm title-font">WEROAD</h4>
+        <p class="text-xs text-secondary mt-1">Info viaggio Cairo Express</p>
+       </div>
+      </div></a> <a href="https://www.ambilcairo.esteri.it" target="_blank" rel="noopener noreferrer" class="card-egypt rounded-xl p-5 hover:scale-105 transition-transform">
+      <div class="flex items-center"><span class="text-3xl mr-4">🇮🇹</span>
+       <div>
+        <h4 class="font-semibold text-primary text-sm title-font">AMBASCIATA</h4>
+        <p class="text-xs text-secondary mt-1">Ambasciata Italia</p>
+       </div>
+      </div></a> <a href="https://egypt.travel" target="_blank" rel="noopener noreferrer" class="card-egypt rounded-xl p-5 hover:scale-105 transition-transform">
+      <div class="flex items-center"><span class="text-3xl mr-4">🏛️</span>
+       <div>
+        <h4 class="font-semibold text-primary text-sm title-font">EGYPT TOURISM</h4>
+        <p class="text-xs text-secondary mt-1">Sito ufficiale turismo</p>
+       </div>
+      </div></a>
+    </div>
+   </div>
+  </div><!-- Modal per le sezioni -->
+  <div id="modal" class="fixed inset-0 bg-black/70 hidden items-center justify-center z-50 p-4">
+   <div class="card-egypt rounded-xl max-w-3xl w-full max-h-[90%] overflow-hidden">
+    <div class="p-6">
+     <div class="flex justify-between items-center mb-4 pb-4 border-b-2 border-gold">
+      <h2 id="modal-title" class="text-xl font-bold text-primary title-font"></h2><button onclick="closeModal()" class="text-secondary hover:text-gold text-3xl font-bold transition-colors">×</button>
+     </div>
+     <div id="modal-content" class="text-secondary overflow-y-auto max-h-[70vh] text-sm"><!-- Il contenuto verrà inserito qui -->
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+        // Countdown Timer - 16 gennaio
+        function updateCountdown() {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            
+            // 16 gennaio dell'anno corrente o prossimo
+            let targetDate = new Date(currentYear, 0, 16, 0, 0, 0); // Mese 0 = gennaio
+            
+            // Se siamo già oltre il 16 gennaio di quest'anno, vai al prossimo anno
+            if (now > targetDate) {
+                targetDate = new Date(currentYear + 1, 0, 16, 0, 0, 0);
+            }
+            
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                document.getElementById('days').textContent = '00';
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        const sections = {
+            'itinerario': {
+                title: '🗺️ Itinerario Cairo Express - 5 giorni / 4 notti',
+                content: `
+                    <div class="space-y-4">
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2 title-font text-lg">📅 Programma Completo</h4>
+                            <p class="text-sm opacity-90">Visita guidata alle meraviglie del Cairo, tra storia millenaria e cultura islamica</p>
+                        </div>
+
+                        <div class="bg-gray-50 border-l-4 border-gold p-4 rounded">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">1️⃣</span>
+                                <h4 class="font-semibold text-gray-800 title-font text-lg">Giorno 1 - Benvenuti al Cairo</h4>
+                            </div>
+                            <div class="space-y-2 text-sm text-gray-700 ml-12">
+                                <div class="flex items-start">
+                                    <span class="mr-2">✈️</span>
+                                    <div>
+                                        <strong>Arrivo all'Aeroporto Internazionale del Cairo</strong>
+                                        <p class="text-xs text-gray-600">Trasferimento in hotel dopo l'atterraggio</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">🏨</span>
+                                    <div>
+                                        <strong>Sistemazione in hotel</strong>
+                                        <p class="text-xs text-gray-600">Camera multipla con bagno privato</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">🌙</span>
+                                    <div>
+                                        <strong>Tempo libero</strong>
+                                        <p class="text-xs text-gray-600">Ambientarsi e iniziare a scoprire la città</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 border-l-4 border-gold p-4 rounded">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">2️⃣</span>
+                                <h4 class="font-semibold text-gray-800 title-font text-lg">Giorno 2 - Le Grandi Piramidi di Giza</h4>
+                            </div>
+                            <div class="space-y-2 text-sm text-gray-700 ml-12">
+                                <div class="flex items-start">
+                                    <span class="mr-2">🍳</span>
+                                    <div>
+                                        <strong>Colazione in hotel (INCLUSA)</strong>
+                                        <p class="text-xs text-gray-600">Prima colazione</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">🚐</span>
+                                    <div>
+                                        <strong>Transfer privato A/R per Giza (INCLUSO)</strong>
+                                        <p class="text-xs text-gray-600">Partenza mattutina con transfer privato</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">🔺</span>
+                                    <div>
+                                        <strong>Escursione alla necropoli di Giza con guida locale (INCLUSO)</strong>
+                                        <p class="text-xs text-gray-600">Ammireremo la Grande Piramide, l'unica meraviglia del mondo antico ancora esistente</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">🦁</span>
+                                    <div>
+                                        <strong>Foto iconiche con la Sfinge</strong>
+                                        <p class="text-xs text-gray-600">Il custode millenario della necropoli di Giza</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">⚠️</span>
+                                    <div>
+                                        <strong>Ingressi interni alle piramidi NON inclusi</strong>
+                                        <p class="text-xs text-gray-600">Biglietti opzionali a pagamento extra (cassa comune)</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">🍽️</span>
+                                    <div>
+                                        <strong>Pranzo e cena liberi</strong>
+                                        <p class="text-xs text-gray-600">Non inclusi nel pacchetto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 border-l-4 border-gold p-4 rounded">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">3️⃣</span>
+                                <h4 class="font-semibold text-gray-800 title-font text-lg">Giorno 3 - Lezione di storia egizia</h4>
+                            </div>
+                            <div class="space-y-2 text-sm text-gray-700 ml-12">
+                                <div class="flex items-start">
+                                    <span class="mr-2">🍳</span>
+                                    <div>
+                                        <strong>Colazione in hotel (INCLUSA)</strong>
+                                        <p class="text-xs text-gray-600">Seconda colazione</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">🏛️</span>
+                                    <div>
+                                        <strong>Visita al Museo Egizio con guida (INCLUSO)</strong>
+                                        <p class="text-xs text-gray-600">Scoprire mummie, tesori di Tutankhamon e reperti faraonici</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">👑</span>
+                                    <div>
+                                        <strong>Escursione a Menfi (INCLUSO)</strong>
+                                        <p class="text-xs text-gray-600">L'antica capitale dell'Egitto con la statua colossale di Ramses II</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">⛵</span>
+                                    <div>
+                                        <strong>Traversata sul Nilo in feluca (INCLUSO)</strong>
+                                        <p class="text-xs text-gray-600">La tipica barca a vela tradizionale egiziana</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">🍽️</span>
+                                    <div>
+                                        <strong>Pranzo e cena liberi</strong>
+                                        <p class="text-xs text-gray-600">Non inclusi nel pacchetto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 border-l-4 border-gold p-4 rounded">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">4️⃣</span>
+                                <h4 class="font-semibold text-gray-800 title-font text-lg">Giorno 4 - La città medievale</h4>
+                            </div>
+                            <div class="space-y-2 text-sm text-gray-700 ml-12">
+                                <div class="flex items-start">
+                                    <span class="mr-2">🍳</span>
+                                    <div>
+                                        <strong>Colazione in hotel (INCLUSA)</strong>
+                                        <p class="text-xs text-gray-600">Terza colazione</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">🕌</span>
+                                    <div>
+                                        <strong>Tour del quartiere islamico del Cairo con guida (INCLUSO)</strong>
+                                        <p class="text-xs text-gray-600">Visita alle moschee storiche e architettura medievale</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">🛍️</span>
+                                    <div>
+                                        <strong>Bazar tradizionali - Khan el-Khalili</strong>
+                                        <p class="text-xs text-gray-600">Immersione nella cultura locale e tempo per shopping</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">🍽️</span>
+                                    <div>
+                                        <strong>Pranzo e cena liberi</strong>
+                                        <p class="text-xs text-gray-600">Non inclusi nel pacchetto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 border-l-4 border-gold p-4 rounded">
+                            <div class="flex items-center mb-3">
+                                <span class="text-3xl mr-3">5️⃣</span>
+                                <h4 class="font-semibold text-gray-800 title-font text-lg">Giorno 5 - Check-out e saluti</h4>
+                            </div>
+                            <div class="space-y-2 text-sm text-gray-700 ml-12">
+                                <div class="flex items-start">
+                                    <span class="mr-2">🍳</span>
+                                    <div>
+                                        <strong>Colazione in hotel (INCLUSA)</strong>
+                                        <p class="text-xs text-gray-600">Quarta e ultima colazione</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">🏨</span>
+                                    <div>
+                                        <strong>Check-out dall'hotel</strong>
+                                        <p class="text-xs text-gray-600">Preparazione bagagli e saluti al Cairo</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="mr-2">✈️</span>
+                                    <div>
+                                        <strong>Rientro in aeroporto per il volo di ritorno</strong>
+                                        <p class="text-xs text-gray-600">Volo NON incluso nel pacchetto</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded border-l-4 border-green-600">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">✅ Cosa È INCLUSO nel Pacchetto</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>🏨 <strong>Sistemazione:</strong> 4 notti in camere multiple con bagno privato</li>
+                                <li>🍳 <strong>Colazioni:</strong> 4 colazioni in hotel</li>
+                                <li>👨‍🏫 <strong>Guide locali:</strong> Giorni 2, 3 e 4 (Piramidi, Museo, quartiere islamico)</li>
+                                <li>🚐 <strong>Transfer privato A/R:</strong> Per le Piramidi di Giza (giorno 2)</li>
+                                <li>⛵ <strong>Traversata sul Nilo in feluca:</strong> Esperienza tradizionale (giorno 3)</li>
+                                <li>🏛️ <strong>Visita a Menfi:</strong> Antica capitale egizia (giorno 3)</li>
+                                <li>🩺 <strong>Assicurazione medico-bagaglio:</strong> Copertura completa</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-red-50 p-4 rounded border-l-4 border-red-600">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">❌ Cosa NON È Incluso</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>✈️ <strong>Volo A/R dall'Italia:</strong> Da organizzare e pagare individualmente</li>
+                                <li>🍽️ <strong>Pasti extra:</strong> 4 pranzi e 4 cene non inclusi</li>
+                                <li>🥤 <strong>Bevande:</strong> Acqua, soft drinks, alcolici</li>
+                                <li>🔺 <strong>Ingressi interni alle piramidi:</strong> Biglietti opzionali a pagamento</li>
+                                <li>🎁 <strong>Attività opzionali:</strong> Quad, cammelli, spettacoli (coperti da cassa comune)</li>
+                                <li>💰 <strong>Spese personali:</strong> Souvenir, shopping, mance individuali</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-purple-50 p-4 rounded border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🎭 Attività Extra Opzionali (Cassa Comune)</h4>
+                            <p class="text-sm text-gray-700 mb-2">Queste attività possono essere aggiunte tramite la cassa comune (circa 200€):</p>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>🏜️ <strong>Quad nel deserto:</strong> Safari avventuroso tra le dune</li>
+                                <li>🔺 <strong>Ingressi interni piramidi:</strong> Esplorare le camere sepolcrali</li>
+                                <li>🐪 <strong>Giro in cammello:</strong> Esperienza tradizionale</li>
+                                <li>🎭 <strong>Spettacolo Suoni e Luci:</strong> Show notturno alle Piramidi</li>
+                                <li>💃 <strong>Danza del ventre:</strong> Serata culturale con cena</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            'cosa-portare': {
+                title: '🎒 Cosa Portare in Egitto',
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-amber-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">📄 Documenti Essenziali</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>🛂 <strong>Passaporto valido</strong> (min. 6 mesi)</li>
+                                <li>📋 <strong>Visto turistico</strong> - 25 USD (ottenibile online o all'arrivo)</li>
+                                <li>💳 Copie dei documenti (anche digitali)</li>
+                                <li>💵 Dollari USD per visto e mance</li>
+                                <li>📱 Assicurazione viaggio (medico-bagaglio INCLUSA)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-orange-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">👕 Abbigliamento</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>👟 <strong>Scarpe comodissime</strong> da camminata (FONDAMENTALE!)</li>
+                                <li>🧢 Cappello a tesa larga e occhiali da sole</li>
+                                <li>👚 Abbigliamento leggero e traspirante</li>
+                                <li>🧥 Felpa leggera per serate e luoghi con A/C</li>
+                                <li>🧣 <strong>Sciarpa/foulard</strong> (protegge dal sole, essenziale per moschee)</li>
+                                <li>👗 <strong>Abiti rispettosi:</strong> spalle e ginocchia coperte (obbligatorio per moschee)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-yellow-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">☀️ Protezione Solare</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>🧴 <strong>Crema solare SPF 50+</strong> (portane TANTA! Essenziale per attività nel deserto)</li>
+                                <li>💧 Balsamo labbra con SPF</li>
+                                <li>🕶️ Occhiali da sole con protezione UV</li>
+                                <li>🧴 Doposole o crema idratante</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">💊 Salute & Farmacia</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>💊 Medicinali personali (con ricetta)</li>
+                                <li>💊 Antidiarroico e fermenti lattici</li>
+                                <li>🤒 Antidolorifico/antipiretico</li>
+                                <li>🩹 Cerotti e disinfettante</li>
+                                <li>💧 Salviette disinfettanti</li>
+                                <li>🦟 Repellente per insetti</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">📱 Tecnologia</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>📱 Smartphone + caricatore</li>
+                                <li>🔋 Power bank potente</li>
+                                <li>🔌 Adattatore universale (spine UK type G)</li>
+                                <li>📷 Fotocamera (opzionale)</li>
+                                <li>🎧 Cuffie</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">💧 Idratazione</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>💧 Borraccia riutilizzabile (ESSENZIALE!)</li>
+                                <li>💰 Soldi per comprare acqua in bottiglia</li>
+                                <li>🚰 NON bere mai acqua del rubinetto!</li>
+                                <li>🧊 Evita ghiaccio nelle bevande</li>
+                            </ul>
+                        </div>
+                        <div class="bg-purple-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">💰 Denaro</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>💵 <strong>Dollari USD</strong> (per visto: 25 USD)</li>
+                                <li>💵 <strong>Banconote piccole per mance</strong> (1-5 USD) - ESSENZIALE!</li>
+                                <li>💳 Carta di credito (Visa/Mastercard)</li>
+                                <li>🏦 ATM disponibili per prelievi in valuta locale (EGP)</li>
+                                <li>💶 Cassa comune: circa 200 € (per attività extra)</li>
+                                <li>⚠️ <strong>Contante necessario:</strong> Molti servizi NON accettano carte</li>
+                            </ul>
+                        </div>
+                        <div class="bg-pink-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🎁 Extra Utili</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>🎒 Zaino piccolo per escursioni</li>
+                                <li>📓 Taccuino e penna</li>
+                                <li>🧺 Busta per biancheria sporca</li>
+                                <li>🧻 Fazzoletti e salviette umidificate</li>
+                                <li>🔦 Torcia (utile per tombe e piramidi)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-4 hieroglyph-accent text-white p-4 rounded-lg text-center">
+                        <p class="text-sm"><strong>⚠️ IMPORTANTE:</strong> L'Egitto ha un clima desertico molto caldo e secco. Protezione solare e idratazione sono FONDAMENTALI! Porta sciarpa per attività nel deserto.</p>
+                    </div>
+                `
+            },
+            'spese': {
+                title: '💰 Cassa Comune & Spese',
+                content: `
+                    <div class="space-y-4">
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2 title-font">💵 Cassa Comune</h4>
+                            <p class="text-sm mb-2">La cassa comune copre attività extra opzionali e spese condivise non incluse nel pacchetto base.</p>
+                            <p class="text-lg font-bold">Circa 200 € a persona</p>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">✅ Cosa può coprire la cassa comune (circa 200€)</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>🏜️ Quad nel deserto e attività avventura</li>
+                                <li>🔺 Ingressi opzionali interni alle piramidi</li>
+                                <li>🎭 Spettacoli serali (Suoni e Luci, danza del ventre)</li>
+                                <li>🐪 Giri in cammello</li>
+                                <li>👏 <strong>Mance OBBLIGATORIE</strong> per guide e autisti ($5/persona/giorno)</li>
+                                <li>🍽️ Eventuale cena di gruppo</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-red-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">❌ Cosa NON è incluso nel pacchetto base</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>✈️ Voli internazionali A/R dall'Italia</li>
+                                <li>🛂 Visto turistico (25 USD all'arrivo, o online)</li>
+                                <li>🍽️ Pasti extra (4 pranzi + 4 cene)</li>
+                                <li>🥤 Bevande durante i pasti</li>
+                                <li>🔺 Ingressi opzionali nelle piramidi</li>
+                                <li>🎁 Souvenir e shopping personale</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-yellow-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">💸 Spese Extra da Considerare</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>
+                                    <strong>🛂 Visto turistico:</strong> 25 USD (pagamento in contanti all'arrivo, o online prima della partenza)
+                                </li>
+                                <li>
+                                    <strong>🍽️ Pasti:</strong> 100-500 EGP (ristoranti locali), 300-1000 EGP (ristoranti turistici)
+                                </li>
+                                <li>
+                                    <strong>💧 Acqua:</strong> 0,5-1 USD a bottiglia (bevi MOLTA acqua!)
+                                </li>
+                                <li>
+                                    <strong>🍷 Alcol:</strong> Limitato - birra e vino disponibili in zone turistiche, cocktail solo in alcuni hotel
+                                </li>
+                                <li>
+                                    <strong>🐪 Giro in cammello:</strong> 10-20 USD (coperto da cassa comune)
+                                </li>
+                                <li>
+                                    <strong>🎭 Spettacolo Suoni e Luci:</strong> 15-25 USD (coperto da cassa comune)
+                                </li>
+                                <li>
+                                    <strong>🏜️ Quad nel deserto:</strong> 30-50 USD (coperto da cassa comune)
+                                </li>
+                                <li>
+                                    <strong>🎁 Souvenir:</strong> Budget personale (contrattazione necessaria!)
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">💵 Sistema di Mance (Bakshish)</h4>
+                            <p class="text-sm text-gray-700 mb-2"><strong>⚠️ IMPORTANTE: Le mance sono OBBLIGATORIE in Egitto!</strong></p>
+                            <p class="text-sm text-gray-700 mb-2">Importo raccomandato: <strong>$5 per persona al giorno</strong> per autisti e guide (gestito dalla cassa comune).</p>
+                            <p class="text-sm text-gray-700 mb-2"><strong>💰 Contante ESSENZIALE:</strong> Molti servizi NON accettano carte per le mance, specialmente durante tour privati.</p>
+                            <p class="text-sm text-gray-700 mb-2">Porta banconote piccole in USD (1-5 USD) per mance individuali:</p>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>🚽 <strong>Bagni pubblici:</strong> 1-2 EGP (circa 0,05 USD)</li>
+                                <li>🧳 <strong>Facchini hotel:</strong> 1-2 USD</li>
+                                <li>🚗 <strong>Autisti:</strong> $5/persona/giorno (gestito dalla cassa comune)</li>
+                                <li>👨‍🏫 <strong>Guide turistiche:</strong> $5/persona/giorno (gestito dalla cassa comune)</li>
+                                <li>🍽️ <strong>Ristoranti:</strong> 10% del conto (se non incluso nel servizio)</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-purple-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🏦 Valuta e Cambio</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>💵 <strong>Valuta ufficiale:</strong> Lira Egiziana (EGP)</li>
+                                <li>💱 <strong>Cambio approssimativo:</strong> 1 USD ≈ 30-50 EGP (variabile)</li>
+                                <li>💵 <strong>Dollari USD accettati:</strong> Per visto, mance, alcuni negozi turistici</li>
+                                <li>💳 <strong>Carte di credito:</strong> Accettate in grandi hotel e ristoranti turistici</li>
+                                <li>🏧 <strong>ATM ampiamente disponibili:</strong> In aeroporto e centri commerciali</li>
+                                <li>⚠️ <strong>Contante necessario:</strong> Per la maggior parte delle transazioni quotidiane</li>
+                                <li>💡 <strong>Consiglio:</strong> Cambia piccole somme, usa USD per mance</li>
+                            </ul>
+                        </div>
+
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
+                            <p class="text-sm"><strong>💡 Budget Consigliato Totale:</strong></p>
+                            <p class="text-sm mt-2">200€ cassa comune + 100-150 USD extra per pasti, acqua e piccole spese personali</p>
+                        </div>
+                    </div>
+                `
+            },
+            'foto': {
+                title: '📸 Album Foto Condiviso',
+                content: `
+                    <div class="space-y-4">
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
+                            <h4 class="font-semibold mb-2 title-font text-lg">Condividi i tuoi ricordi egiziani!</h4>
+                            <p class="text-sm opacity-90">Crea un album condiviso per raccogliere tutte le foto del viaggio</p>
+                        </div>
+                        <div class="bg-amber-50 p-6 rounded-lg border-2 border-gold text-center">
+                            <p class="text-sm text-gray-700 mb-4">Link dell'album foto da condividere con il gruppo</p>
+                            <div class="bg-white p-4 rounded-lg">
+                                <p class="text-xs text-gray-500 italic">Inserisci qui il link del tuo album condiviso (Google Photos, iCloud, Dropbox, ecc.)</p>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">📷 Consigli per le Foto</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>🌅 <strong>Golden Hour:</strong> Alba e tramonto per luce magica sulle piramidi</li>
+                                <li>🔋 <strong>Power bank:</strong> Essenziale, scatterai TANTISSIME foto!</li>
+                                <li>🎫 <strong>Permessi foto:</strong> Alcuni musei richiedono biglietto extra per fotocamere</li>
+                                <li>🚫 <strong>Flash vietato:</strong> In musei e tombe per preservare i reperti</li>
+                                <li>👥 <strong>Foto con persone:</strong> Chiedi sempre il permesso ai locali</li>
+                                <li>🐪 <strong>Cammelli:</strong> Bellissimi per foto, ma pattuisci il prezzo PRIMA!</li>
+                                <li>🚫 <strong>Divieti assoluti:</strong> NON fotografare installazioni militari o aeroporti</li>
+                            </ul>
+                        </div>
+                    </div>
+                `
+            },
+            'info-utili': {
+                title: '📋 Info Utili',
+                content: `
+                    <div class="space-y-4">
+                        <div class="bg-amber-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🕌 Cultura e Usanze</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>👗 <strong>Dress code:</strong> Abbigliamento rispettoso, spalle e ginocchia coperte (soprattutto donne)</li>
+                                <li>🧕 <strong>Moschee - OBBLIGATORIO:</strong> Donne devono coprire testa e spalle con sciarpa, pantaloni/gonne lunghe. Uomini: pantaloni lunghi</li>
+                                <li>👞 <strong>Moschee:</strong> Togliere le scarpe prima di entrare</li>
+                                <li>🤝 <strong>Saluti:</strong> "As-salamu alaykum" (la pace sia con te)</li>
+                                <li>🍷 <strong>Alcol:</strong> Limitato - birra e vino disponibili in zone turistiche, cocktail solo in alcuni hotel</li>
+                                <li>📸 <strong>Fotografie:</strong> Chiedere il permesso prima di fotografare persone</li>
+                                <li>👫 <strong>Affetto pubblico:</strong> Evitare dimostrazioni eccessive</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🗣️ Frasi Utili in Arabo</h4>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li><strong>Marhaba</strong> - Ciao</li>
+                                <li><strong>Shukran</strong> - Grazie</li>
+                                <li><strong>Min fadlak/fadlik</strong> - Per favore (m/f)</li>
+                                <li><strong>La shukran</strong> - No, grazie</li>
+                                <li><strong>Bikam?</strong> - Quanto costa?</li>
+                                <li><strong>Maasalama</strong> - Arrivederci</li>
+                                <li><strong>Aiwa / La'a</strong> - Sì / No</li>
+                                <li><strong>Inshallah</strong> - Se Dio vuole</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">☀️ Clima e Meteo (Gennaio)</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>🌡️ <strong>Temperature:</strong> Clima mite, 20-25°C di giorno, fresco di sera (15-18°C)</li>
+                                <li>💧 <strong>Umidità:</strong> Molto bassa, clima secco</li>
+                                <li>☀️ <strong>Sole:</strong> Intenso, protezione solare ESSENZIALE</li>
+                                <li>🌙 <strong>Escursione termica:</strong> Grande differenza giorno/notte, porta felpa!</li>
+                                <li>🌤️ <strong>Piogge:</strong> Rarissime in gennaio</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-red-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🚰 Sicurezza Alimentare</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>💧 <strong>Acqua:</strong> SOLO in bottiglia sigillata, mai dal rubinetto</li>
+                                <li>🧊 <strong>Ghiaccio:</strong> Evitare nelle bevande</li>
+                                <li>🥗 <strong>Insalate crude:</strong> Evitare, preferire verdure cotte</li>
+                                <li>🍉 <strong>Frutta:</strong> Solo se sbucciata da te</li>
+                                <li>🍽️ <strong>Ristoranti:</strong> Preferire quelli frequentati da molti clienti</li>
+                                <li>🧴 <strong>Igiene:</strong> Portare gel disinfettante, usarlo spesso</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-yellow-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🛍️ Shopping e Contrattazione</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>💰 <strong>Contrattazione:</strong> SEMPRE nei mercati! Inizia a 1/3 del prezzo richiesto</li>
+                                <li>🎭 <strong>È un gioco:</strong> Sorridi, sii gentile, non aver fretta</li>
+                                <li>🚶 <strong>Tecnica "walk away":</strong> Funziona quasi sempre!</li>
+                                <li>🎁 <strong>Souvenir popolari:</strong> Papiri, profumi, spezie, gioielli, alabastro</li>
+                                <li>⚠️ <strong>Attenzione:</strong> Molti "antichi" sono riproduzioni moderne</li>
+                                <li>📜 <strong>Certificato:</strong> Richiedi certificato di autenticità per oggetti costosi</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-purple-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">📱 Connettività</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>📶 <strong>SIM locale:</strong> Disponibile in aeroporto (Vodafone, Orange, Etisalat)</li>
+                                <li>💰 <strong>Costo:</strong> 10-20 USD per pacchetto turistico con dati</li>
+                                <li>📡 <strong>WiFi:</strong> Disponibile in hotel e alcuni caffè</li>
+                                <li>💬 <strong>WhatsApp:</strong> Funziona perfettamente, mantieni contatto con gruppo</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-orange-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🚗 Trasporti & Sicurezza</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>🚗 <strong>Trasporti consigliati:</strong> Taxi ufficiali, Uber o Careem</li>
+                                <li>🚫 <strong>NON consigliati:</strong> Autobus locali e metro (per turisti)</li>
+                                <li>💰 <strong>Prezzo taxi:</strong> Pattuisci SEMPRE la tariffa prima di partire</li>
+                                <li>⚠️ <strong>Sicurezza pedonale:</strong> Attenzione! Guidatori imprevedibili, marciapiedi rari</li>
+                                <li>👜 <strong>Borseggi:</strong> Attenzione nei mercati affollati</li>
+                                <li>👥 <strong>Stare in gruppo:</strong> Specialmente di sera</li>
+                                <li>🏨 <strong>Cassaforte:</strong> Usa quella dell'hotel per oggetti di valore</li>
+                            </ul>
+                        </div>
+
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
+                            <p class="text-sm"><strong>💡 Consiglio d'Oro:</strong></p>
+                            <p class="text-sm mt-2">L'Egitto è un paese sicuro per i turisti. Usa il buon senso, rispetta la cultura locale, e goditi questa esperienza unica nella storia dell'umanità! 🏺✨</p>
+                        </div>
+                    </div>
+                `
+            },
+            'cultura': {
+                title: '🏺 Cultura Egiziana',
+                content: `
+                    <div class="space-y-4">
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
+                            <h4 class="font-semibold mb-2 title-font text-lg">5000 Anni di Storia</h4>
+                            <p class="text-sm opacity-90">Una delle civiltà più antiche e affascinanti del mondo</p>
+                        </div>
+
+                        <div class="bg-amber-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">👑 Antico Egitto</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>⏳ <strong>Durata:</strong> Circa 3000 anni di civiltà continua (3100 a.C. - 30 a.C.)</li>
+                                <li>👑 <strong>Faraoni famosi:</strong> Cheope, Tutankhamon, Ramses II, Cleopatra</li>
+                                <li>🔺 <strong>Piramidi:</strong> Tombe monumentali per l'aldilà dei faraoni</li>
+                                <li>📜 <strong>Geroglifici:</strong> Sistema di scrittura sacra con oltre 700 simboli</li>
+                                <li>⚱️ <strong>Mummificazione:</strong> Processo di 70 giorni per preservare il corpo</li>
+                                <li>🌾 <strong>Il Nilo:</strong> Cuore della civiltà, fonte di vita e prosperità</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🏛️ Divinità Principali</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>☀️ <strong>Ra:</strong> Dio del sole, creatore supremo</li>
+                                <li>🦅 <strong>Horus:</strong> Dio del cielo, protettore dei faraoni (testa di falco)</li>
+                                <li>👑 <strong>Osiride:</strong> Dio dell'aldilà e della rinascita</li>
+                                <li>🪶 <strong>Iside:</strong> Dea della magia e della maternità</li>
+                                <li>⚡ <strong>Anubi:</strong> Dio della mummificazione (testa di sciacallo)</li>
+                                <li>🐱 <strong>Bastet:</strong> Dea della casa e della fertilità (testa di gatto)</li>
+                                <li>🦆 <strong>Thoth:</strong> Dio della saggezza e della scrittura (testa di ibis)</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🎨 Arte e Simboli</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>👁️ <strong>Occhio di Horus:</strong> Protezione, guarigione, potere reale</li>
+                                <li>☥ <strong>Ankh:</strong> Chiave della vita, simbolo di vita eterna</li>
+                                <li>🪲 <strong>Scarabeo:</strong> Rinascita, trasformazione, protezione</li>
+                                <li>🌸 <strong>Loto:</strong> Purezza, creazione, rinascita quotidiana del sole</li>
+                                <li>🐍 <strong>Cobra (Ureo):</strong> Potere divino, protezione faraonica</li>
+                                <li>🪶 <strong>Piuma di Maat:</strong> Verità, giustizia, equilibrio cosmico</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-yellow-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">⚱️ L'Aldilà e la Mummificazione</h4>
+                            <p class="text-sm text-gray-700 mb-2">Gli Egizi credevano nella vita dopo la morte:</p>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>💼 <strong>Processo:</strong> 70 giorni di mummificazione, rimozione organi, essicazione</li>
+                                <li>🏺 <strong>Vasi canopi:</strong> Contenevano stomaco, intestino, fegato, polmoni</li>
+                                <li>❤️ <strong>Il cuore:</strong> Lasciato nel corpo, sede dell'anima e intelligenza</li>
+                                <li>⚖️ <strong>Giudizio di Osiride:</strong> Il cuore pesato contro la piuma di Maat</li>
+                                <li>📖 <strong>Libro dei Morti:</strong> Formule magiche per guidare l'anima</li>
+                                <li>🎁 <strong>Corredo funebre:</strong> Cibo, gioielli, servi ushabti per l'aldilà</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-red-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🍽️ Cucina Egiziana</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>🍞 <strong>Aish Baladi:</strong> Pane pita tradizionale (base di ogni pasto)</li>
+                                <li>🫘 <strong>Ful Medames:</strong> Fave stufate, piatto nazionale</li>
+                                <li>🥙 <strong>Ta'ameya:</strong> Falafel egiziani (con fave, non ceci)</li>
+                                <li>🍝 <strong>Koshari:</strong> Mix di riso, pasta, lenticchie, salsa pomodoro</li>
+                                <li>🥩 <strong>Kebab e Kofta:</strong> Carne grigliata marinata</li>
+                                <li>🫔 <strong>Mahshi:</strong> Verdure ripiene di riso e carne</li>
+                                <li>🍰 <strong>Baklava:</strong> Dolce con pasta fillo, miele e noci</li>
+                                <li>🧃 <strong>Karkadeh:</strong> Tè freddo di ibisco</li>
+                                <li>☕ <strong>Qahwa:</strong> Caffè egiziano denso e aromatico</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-purple-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">📚 Curiosità Affascinanti</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>🐱 Gli Egizi adoravano i gatti, considerati sacri e protetti per legge</li>
+                                <li>💄 Sia uomini che donne usavano trucco (kohl) per proteggere gli occhi dal sole</li>
+                                <li>🪒 I sacerdoti si rasavano completamente, anche le sopracciglia, per purezza rituale</li>
+                                <li>📏 La Grande Piramide fu la struttura più alta del mondo per 3800 anni</li>
+                                <li>🔢 Inventarono un calendario di 365 giorni e il sistema decimale</li>
+                                <li>📄 Il papiro è il primo "foglio" della storia, antenato della carta</li>
+                                <li>🏥 Medicina avanzata: chirurgia, dentistica, cure specialistiche</li>
+                                <li>👗 Le parrucche elaborate erano segno di status sociale</li>
+                            </ul>
+                        </div>
+
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg">
+                            <h4 class="font-semibold mb-2 title-font">✨ L'Eredità Eterna</h4>
+                            <p class="text-sm">L'Antico Egitto ha influenzato arte, architettura, religione e scienza per millenni. Visitare l'Egitto significa camminare attraverso la storia dell'umanità stessa, toccare pietre che hanno visto nascere imperi e tramontare ere. È un'esperienza che cambia la prospettiva sulla vita, sul tempo e sull'eternità. 🏺✨</p>
+                        </div>
+                    </div>
+                `
+            },
+            'faq': {
+                title: '❓ Domande Frequenti',
+                content: `
+                    <div class="space-y-3">
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
+                            <p class="font-semibold title-font">Risposte alle domande più comuni sul viaggio in Egitto</p>
+                        </div>
+
+                        <div class="bg-amber-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">🛂 Serve il visto per l'Egitto?</h4>
+                            <p class="text-sm text-gray-700">Sì, gli italiani necessitano di visto turistico. Costo 25 USD, ottenibile online prima della partenza O all'arrivo in aeroporto (porta contanti USD). Validità: 30 giorni. Passaporto deve avere validità residua di almeno 6 mesi.</p>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">💉 Servono vaccinazioni?</h4>
+                            <p class="text-sm text-gray-700">Nessuna vaccinazione obbligatoria. Consigliate: epatite A e B, tifo. Porta con te farmaci antidiarroici e fermenti lattici. Bevi solo acqua in bottiglia sigillata.</p>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">🌡️ Che temperature ci sono a gennaio?</h4>
+                            <p class="text-sm text-gray-700">Clima mite: giornate piacevoli (20-25°C), fresche di sera (15-18°C). Sole molto intenso. Porta protezione solare alta, cappello, occhiali e una felpa per la sera.</p>
+                        </div>
+
+                        <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">💰 Quanto costa il viaggio?</h4>
+                            <p class="text-sm text-gray-700">Oltre al pacchetto base: visto (25 USD), cassa comune (200€ - include mance obbligatorie), pasti non inclusi (100-500 EGP locali, 300-1000 EGP turistici), acqua. Budget consigliato: 200€ cassa comune + 100-150 USD extra. IMPORTANTE: Contante necessario per la maggior parte delle transazioni.</p>
+                        </div>
+
+                        <div class="bg-red-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">👗 Come devo vestirmi?</h4>
+                            <p class="text-sm text-gray-700">Abbigliamento rispettoso della cultura islamica: spalle e ginocchia coperte, soprattutto per le donne. Evita vestiti troppo aderenti o scollati. Per moschee (OBBLIGATORIO): donne - sciarpa per capelli, spalle coperte, pantaloni/gonne lunghe; uomini - pantaloni lunghi. Scarpe comodissime sono ESSENZIALI!</p>
+                        </div>
+
+                        <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">📱 Funziona il telefono?</h4>
+                            <p class="text-sm text-gray-700">Roaming internazionale disponibile ma costoso. Consiglio: compra SIM locale in aeroporto (10-20 USD con dati inclusi). WiFi disponibile in hotel. WhatsApp funziona perfettamente.</p>
+                        </div>
+
+                        <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">🐪 Posso fare il giro in cammello?</h4>
+                            <p class="text-sm text-gray-700">Sì! Esperienza tipica alle Piramidi (coperta da cassa comune). IMPORTANTE: pattuisci il prezzo PRIMA di salire, assicurati includa anche la discesa. Non dare soldi extra per "foto" non richieste.</p>
+                        </div>
+
+                        <div class="bg-pink-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">🛡️ È sicuro visitare l'Egitto?</h4>
+                            <p class="text-sm text-gray-700">Le zone turistiche (Cairo, Giza) sono molto sicure e presidiate. Segui le indicazioni della guida, stai con il gruppo, evita zone isolate di notte. ATTENZIONE pedonale: guidatori imprevedibili e marciapiedi rari. Gli Egizi sono molto accoglienti con i turisti.</p>
+                        </div>
+
+                        <div class="bg-cyan-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">🍽️ Posso mangiare cibo di strada?</h4>
+                            <p class="text-sm text-gray-700">Con cautela. Preferisci locali molto frequentati, cibo caldo appena cucinato. Evita insalate crude, frutta non sbucciata da te, ghiaccio. Porta sempre gel disinfettante. Segui il detto: "Cook it, peel it, or forget it!"</p>
+                        </div>
+
+                        <div class="bg-indigo-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">💳 Posso usare la carta di credito?</h4>
+                            <p class="text-sm text-gray-700">Carte accettate in hotel e ristoranti turistici. Per il resto serve contante: USD per visto e mance (ESSENZIALE - molti servizi non accettano carte per mance), EGP per piccole spese. ATM ampiamente disponibili in aeroporto e centri commerciali.</p>
+                        </div>
+
+                        <div class="bg-teal-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">📸 Posso fotografare ovunque?</h4>
+                            <p class="text-sm text-gray-700">Piramidi: sì. Musei: alcuni richiedono biglietto extra per macchina fotografica, flash sempre vietato. Persone: chiedi sempre il permesso. Installazioni militari e aeroporti: assolutamente vietato.</p>
+                        </div>
+
+                        <div class="bg-lime-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">🛍️ Come si contratta nei mercati?</h4>
+                            <p class="text-sm text-gray-700">La contrattazione è parte della cultura! Inizia offrendo 1/3 del prezzo richiesto. Sorridi, sii gentile ma fermo. La tecnica "walk away" funziona quasi sempre. Non aver fretta. È un gioco sociale, divertiti!</p>
+                        </div>
+
+                        <div class="bg-violet-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">🚗 Come mi muovo al Cairo?</h4>
+                            <p class="text-sm text-gray-700">Usa SOLO taxi ufficiali, Uber o Careem. Pattuisci sempre il prezzo prima. NON usare autobus locali o metro (non consigliati per turisti). Attenzione come pedone: guidatori imprevedibili!</p>
+                        </div>
+
+                        <div class="bg-amber-50 p-4 rounded-lg border-l-4 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-2">🏨 Quando saprò il nome dell'hotel?</h4>
+                            <p class="text-sm text-gray-700">Il nome dell'hotel viene comunicato generalmente negli ultimi giorni prima della partenza. In alcuni casi, l'informazione potrebbe essere disponibile solo 48 ore prima dell'inizio del viaggio. Questo è normale nella gestione dei tour di gruppo. L'hotel sarà comunque conforme agli standard del pacchetto (camere multiple con bagno privato, colazione inclusa).</p>
+                        </div>
+
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
+                            <p class="text-sm"><strong>💡 Altre domande?</strong></p>
+                            <p class="text-sm mt-2">Contatta il coordinatore del viaggio! Nessuna domanda è stupida quando si tratta della tua prima esperienza in Egitto. 🌟</p>
+                        </div>
+                    </div>
+                `
+            },
+            'emergency': {
+                title: '🚨 Numeri di Emergenza',
+                content: `
+                    <div class="space-y-4">
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
+                            <p class="font-semibold title-font">Conserva questi numeri sul telefono!</p>
+                        </div>
+
+                        <div class="bg-red-50 p-4 rounded-lg border-2 border-red-600">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">📞 Emergenze Egitto</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li class="flex items-center">
+                                    <span class="text-2xl mr-3">🆘</span>
+                                    <div>
+                                        <strong>Emergenze Generali:</strong> 122
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-2xl mr-3">👮</span>
+                                    <div>
+                                        <strong>Polizia:</strong> 122
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-2xl mr-3">🚑</span>
+                                    <div>
+                                        <strong>Ambulanza:</strong> 123
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-2xl mr-3">🚒</span>
+                                    <div>
+                                        <strong>Vigili del Fuoco:</strong> 180
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-2xl mr-3">🗺️</span>
+                                    <div>
+                                        <strong>Polizia Turistica:</strong> 126
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-blue-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🇮🇹 Ambasciata Italiana al Cairo</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li><strong>📍 Indirizzo:</strong> 15 Abdel Rahman Fahmy St, Garden City, Cairo</li>
+                                <li><strong>☎️ Telefono:</strong> +20 2 2794 3194</li>
+                                <li><strong>🆘 Emergenze Consolari:</strong> +20 100 1631 157 (24/7)</li>
+                                <li><strong>✉️ Email:</strong> ambasciata.cairo@esteri.it</li>
+                                <li><strong>🌐 Sito:</strong> www.ambilcairo.esteri.it</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-green-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🏥 Ospedali Internazionali Cairo</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
+                                <li>
+                                    <strong>🏥 As-Salam International Hospital</strong><br>
+                                    <span class="text-xs">Tel: +20 2 2524 0250 | Corniche El Nile, Maadi</span>
+                                </li>
+                                <li>
+                                    <strong>🏥 Cairo Medical Center</strong><br>
+                                    <span class="text-xs">Tel: +20 2 2735 3939 | Heliopolis</span>
+                                </li>
+                                <li>
+                                    <strong>🏥 Anglo-American Hospital</strong><br>
+                                    <span class="text-xs">Tel: +20 2 2735 6162 | Zamalek</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-yellow-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">💊 Farmacie 24h</h4>
+                            <p class="text-sm text-gray-700 mb-2">Cerca "Seif Pharmacy" o chiedi in hotel. Molte farmacie sono aperte fino a tardi.</p>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li><strong>Seif Pharmacy - Downtown:</strong> +20 2 2575 3369</li>
+                                <li><strong>El Ezaby Pharmacy:</strong> Catena diffusa, varie sedi 24h</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-orange-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">📱 Cosa fare in caso di emergenza</h4>
+                            <ol class="text-sm space-y-2 text-gray-700 list-decimal list-inside">
+                                <li>Mantieni la calma</li>
+                                <li>Contatta immediatamente il coordinatore del viaggio</li>
+                                <li>Se necessario, chiama il 122 (emergenze generali)</li>
+                                <li>Per problemi con documenti, contatta l'Ambasciata Italiana</li>
+                                <li>Conserva sempre con te: passaporto (o copia), assicurazione viaggio, contatti emergenza</li>
+                            </ol>
+                        </div>
+
+                        <div class="bg-purple-50 p-4 rounded-lg border-2 border-gold">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">📋 Info Assicurazione Viaggio</h4>
+                            <p class="text-sm text-gray-700 mb-2">✅ Assicurazione medico-bagaglio INCLUSA nel pacchetto</p>
+                            <p class="text-sm text-gray-700 mb-2">Verifica di avere:</p>
+                            <ul class="text-sm space-y-1 text-gray-700">
+                                <li>✅ Copertura medica all'estero</li>
+                                <li>✅ Rimpatrio sanitario</li>
+                                <li>✅ Numero di assistenza 24/7</li>
+                                <li>✅ Copia del contratto sempre con te</li>
+                            </ul>
+                        </div>
+
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
+                            <p class="text-sm"><strong>⚠️ Ricorda:</strong></p>
+                            <p class="text-sm mt-2">In caso di emergenza sanitaria, contatta SEMPRE prima l'assicurazione viaggio prima di andare in ospedale, per evitare problemi con i rimborsi.</p>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        function openSection(sectionId) {
+            const section = sections[sectionId];
+            if (section) {
+                document.getElementById('modal-title').innerHTML = section.title;
+                document.getElementById('modal-content').innerHTML = section.content;
+                document.getElementById('modal').classList.remove('hidden');
+                document.getElementById('modal').classList.add('flex');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.add('hidden');
+            document.getElementById('modal').classList.remove('flex');
+        }
+
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b227d060755ed2b',t:'MTc2NjQzNjU5My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
