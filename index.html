@@ -67,7 +67,71 @@
     </div>
    </div>
   </div>
-  <div class="container mx-auto px-4 py-4 pb-8"><!-- Countdown -->
+  <div class="container mx-auto px-4 py-4 pb-8"><!-- Search Bar -->
+   <div class="mb-6">
+    <div class="card-egypt rounded-xl overflow-hidden max-w-lg mx-auto p-4">
+     <div class="relative"><input type="text" id="search-input" placeholder="���� Cerca info... (es. visto, temperature, mance)" class="w-full px-4 py-3 pr-10 rounded-lg border-2 border-gold focus:outline-none focus:border-gold text-sm" style="font-family: 'Montserrat', sans-serif;"> <button id="clear-search" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gold hidden" onclick="clearSearch()"> ✕ </button>
+     </div>
+     <div id="search-results" class="mt-3 hidden">
+      <div class="text-xs text-gray-600 mb-2 font-semibold">
+       Risultati:
+      </div>
+      <div id="results-container" class="space-y-2 max-h-48 overflow-y-auto"></div>
+     </div>
+    </div>
+   </div><!-- WeRoad Intro Section -->
+   <div class="mb-8 max-w-5xl mx-auto">
+    <div class="card-egypt rounded-xl overflow-hidden p-6">
+     <h2 class="text-2 font-bold text-primary title-font mb-4 text-center">🐪 WeRoad in a Nutshell</h2>
+     <div class="space-y-4">
+       <h3 class="font-semibold text-primary mb-2 title-font flex items-center"><span class="text-2xl mr-2">🤔</span> Prima volta con WeRoad?</h3>
+       <p class="text-sm text-gray-700 leading-relaxed mb-3">Allora ti sarà utile sapere come funziona e cosa aspettarti:</p>
+       <p class="text-sm text-gray-700 leading-relaxed mb-3">WeRoad propone diversi tipi di viaggio e noi abbiamo scelto uno dei più intensi: il <strong>Cairo Express</strong>. Questi viaggi sono pieni di avventure ed esperienze straordinarie. 5 giorni di pura scoperta tra piramidi millenarie, mercati colorati e la frenetica vita del Cairo! 🔺✨</p>
+       <p class="text-sm text-gray-700 leading-relaxed mb-3">Da queste parti ci piace conoscere il luogo, ma anche la gente che ci accompagna, che darà un sapore particolare e unico all'itinerario: ogni viaggio è diverso, ma anche ogni gruppo lo è! 🌍💬</p>
+       <p class="text-sm text-gray-700 leading-relaxed">Nello spirito della scoperta, anche il coordinatore è uno di voi, un compagno di viaggio. Ben lontano dall'essere una semplice guida, è tanto gasato quanto voi, con la differenza che WeRoad gli fornisce tutti gli strumenti per farvi passare 5 giorni indimenticabili e al tempo stesso farvi dimenticare di tutto il resto. 🚶‍♀️🎉</p>
+       <p class="text-sm text-gray-700 leading-relaxed mt-3 italic">Questo è lo spirito WeRoad, ma se hai ancora domande... sai dove trovarmi! 👋💌</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h3 class="font-semibold text-primary mb-3 title-font flex items-center"><span class="text-2xl mr-2">💫</span> I Valori WeRoad</h3>
+        <ul class="text-sm text-gray-700 space-y-2">
+         <li class="flex items-start"><span class="mr-2">🌱</span> <span>Viaggi autentici e sostenibili</span></li>
+         <li class="flex items-start"><span class="mr-2">👥</span> <span>Gruppi piccoli (max 15 persone)</span></li>
+         <li class="flex items-start"><span class="mr-2">🏛️</span> <span>Esperienze locali genuine</span></li>
+         <li class="flex items-start"><span class="mr-2">❤️</span> <span>Community di viaggiatori appassionati</span></li>
+        </ul>
+       </div>
+       <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-4 rounded-lg border-2 border-gold">
+        <h3 class="font-semibold text-primary mb-3 title-font flex items-center"><span class="text-2xl mr-2">🐪</span> Cairo Express</h3>
+        <p class="text-sm text-gray-700 mb-3">Un'avventura di <strong>5 giorni</strong> alla scoperta della terra dei faraoni 👑. Dalle maestose Piramidi di Giza alle moschee del Cairo islamico 🕌, dai tesori dei musei ai mercati vivaci 🛍️.</p>
+       </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+       <div class="bg-purple-50 p-4 rounded-lg border-2 border-gold">
+        <h3 class="font-semibold text-primary mb-3 title-font">✨ Highlights</h3>
+        <ul class="text-sm text-gray-700 space-y-1">
+         <li>🔺 Grande Piramide di Cheope e Sfinge</li>
+         <li>🕌 Moschea Al-Azhar e Via Islamica</li>
+         <li>🏛️ Cittadella di Saladino</li>
+         <li>⛪ Cairo Copto (quartiere cristiano)</li>
+         <li>🛍��� Khan el-Khalili Bazaar</li>
+         <li>🏺 Opzionale: GEM Museum e Saqqara</li>
+        </ul>
+       </div>
+       <div class="bg-green-50 p-3 rounded-lg border-2 border-gold">
+        <h3 class="text-sm font-semibold text-primary mb-2 title-font">🎯 Esperienze</h3>
+        <ul class="text-xs text-gray-700 space-y-1">
+         <li>🍽️ Cucina egiziana autentica</li>
+         <li>🐪 Giro in cammello nel deserto</li>
+         <li>⛵ Navigazione in feluca sul Nilo</li>
+         <li>🛍️ Contrattazione nei mercati</li>
+         <li>🏜️ Quad nel deserto (opzionale)</li>
+         <li>🎭 Cultura e tradizioni millenarie</li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div><!-- Countdown -->
    <div class="mb-8">
     <div class="card-egypt rounded-xl overflow-hidden max-w-lg mx-auto p-5">
      <div class="text-center mb-3">
@@ -145,7 +209,7 @@
     <div class="card-egypt rounded-lg p-3 cursor-pointer" onclick="openSection('info-utili')">
      <div class="text-center flex flex-col items-center justify-center h-full">
       <div class="text-3xl mb-1">
-       📋
+       ℹ️
       </div>
       <h3 class="text-xs font-semibold title-font" style="color: #4a3f2e;">INFO UTILI</h3>
      </div>
@@ -172,6 +236,14 @@
        🚨
       </div>
       <h3 class="text-xs font-semibold title-font" style="color: #4a3f2e;">EMERGENCY</h3>
+     </div>
+    </div><!-- Fun Zone -->
+    <div class="card-egypt rounded-lg p-3 cursor-pointer" onclick="openSection('fun-zone')">
+     <div class="text-center flex flex-col items-center justify-center h-full">
+      <div class="text-3xl mb-1">
+       🎉
+      </div>
+      <h3 class="text-xs font-semibold title-font" style="color: #4a3f2e;">FUN ZONE</h3>
      </div>
     </div>
    </div><!-- Mappa -->
@@ -269,7 +341,7 @@
                             </div>
                             <div class="space-y-2 text-sm text-gray-700 ml-12">
                                 <div class="flex items-start">
-                                    <span class="mr-2">✈️</span>
+                                    <span class="mr-2">���️</span>
                                     <div>
                                         <strong>Arrivo all'Aeroporto Internazionale del Cairo</strong>
                                         <p class="text-xs text-gray-600">Trasferimento in hotel dopo l'atterraggio</p>
@@ -302,7 +374,6 @@
                                     <span class="mr-2">🍳</span>
                                     <div>
                                         <strong>Colazione in hotel (INCLUSA)</strong>
-                                        <p class="text-xs text-gray-600">Prima colazione</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
@@ -322,7 +393,7 @@
                                 <div class="flex items-start">
                                     <span class="mr-2">🦁</span>
                                     <div>
-                                        <strong>Foto iconiche con la Sfinge</strong>
+                                        <strong>La Sfinge</strong>
                                         <p class="text-xs text-gray-600">Il custode millenario della necropoli di Giza</p>
                                     </div>
                                 </div>
@@ -336,7 +407,7 @@
                                 <div class="flex items-start">
                                     <span class="mr-2">🍽️</span>
                                     <div>
-                                        <strong>Pranzo e cena liberi</strong>
+                                        <strong>Pranzo e cena</strong>
                                         <p class="text-xs text-gray-600">Non inclusi nel pacchetto</p>
                                     </div>
                                 </div>
@@ -346,41 +417,40 @@
                         <div class="bg-gray-50 border-l-4 border-gold p-4 rounded">
                             <div class="flex items-center mb-3">
                                 <span class="text-3xl mr-3">3️⃣</span>
-                                <h4 class="font-semibold text-gray-800 title-font text-lg">Giorno 3 - Lezione di storia egizia</h4>
+                                <h4 class="font-semibold text-gray-800 title-font text-lg">Giorno 3 - Tempo libero e attività</h4>
                             </div>
                             <div class="space-y-2 text-sm text-gray-700 ml-12">
                                 <div class="flex items-start">
                                     <span class="mr-2">🍳</span>
                                     <div>
                                         <strong>Colazione in hotel (INCLUSA)</strong>
-                                        <p class="text-xs text-gray-600">Seconda colazione</p>
                                     </div>
                                 </div>
-                                <div class="flex items-start">
+                                <div class="flex items-start bg-purple-50 p-2 rounded">
                                     <span class="mr-2">🏛️</span>
                                     <div>
-                                        <strong>Visita al Museo Egizio con guida (INCLUSO)</strong>
-                                        <p class="text-xs text-gray-600">Scoprire mummie, tesori di Tutankhamon e reperti faraonici</p>
+                                        <strong>Visita al GEM Museum</strong>
+                                        <p class="text-xs text-gray-600">🎯 Il nuovo Grande Museo Egizio con mummie, tesori di Tutankhamon e reperti faraonici</p>
                                     </div>
                                 </div>
-                                <div class="flex items-start">
+                                <div class="flex items-start bg-purple-50 p-2 rounded">
                                     <span class="mr-2">👑</span>
                                     <div>
-                                        <strong>Escursione a Menfi (INCLUSO)</strong>
-                                        <p class="text-xs text-gray-600">L'antica capitale dell'Egitto con la statua colossale di Ramses II</p>
+                                        <strong>Escursione a Menfi e Saqqara</strong>
+                                        <p class="text-xs text-gray-600">🎯 L'antica capitale dell'Egitto con la statua colossale di Ramses II e la piramide a gradoni</p>
                                     </div>
                                 </div>
-                                <div class="flex items-start">
+                                <div class="flex items-start bg-purple-50 p-2 rounded">
                                     <span class="mr-2">⛵</span>
                                     <div>
-                                        <strong>Traversata sul Nilo in feluca (INCLUSO)</strong>
-                                        <p class="text-xs text-gray-600">La tipica barca a vela tradizionale egiziana</p>
+                                        <strong>Traversata sul Nilo in feluca</strong>
+                                        <p class="text-xs text-gray-600">🎯 La tipica barca a vela tradizionale egiziana</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
                                     <span class="mr-2">🍽️</span>
                                     <div>
-                                        <strong>Pranzo e cena liberi</strong>
+                                        <strong>Pranzo e cena</strong>
                                         <p class="text-xs text-gray-600">Non inclusi nel pacchetto</p>
                                     </div>
                                 </div>
@@ -390,34 +460,47 @@
                         <div class="bg-gray-50 border-l-4 border-gold p-4 rounded">
                             <div class="flex items-center mb-3">
                                 <span class="text-3xl mr-3">4️⃣</span>
-                                <h4 class="font-semibold text-gray-800 title-font text-lg">Giorno 4 - La città medievale</h4>
+                                <h4 class="font-semibold text-gray-800 title-font text-lg">Giorno 4 - Cairo Islamico e Copto</h4>
                             </div>
                             <div class="space-y-2 text-sm text-gray-700 ml-12">
                                 <div class="flex items-start">
                                     <span class="mr-2">🍳</span>
                                     <div>
                                         <strong>Colazione in hotel (INCLUSA)</strong>
-                                        <p class="text-xs text-gray-600">Terza colazione</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
                                     <span class="mr-2">🕌</span>
                                     <div>
-                                        <strong>Tour del quartiere islamico del Cairo con guida (INCLUSO)</strong>
-                                        <p class="text-xs text-gray-600">Visita alle moschee storiche e architettura medievale</p>
+                                        <strong>Visita del Cairo con guida DMC e ingressi inclusi (INCLUSO NEL PACCHETTO)</strong>
+                                        <p class="text-xs text-gray-600">Tour completo dei siti più importanti:</p>
+                                        <ul class="text-xs mt-1 ml-4 space-y-1">
+                                            <li>• <strong>Moschea Al-Azhar</strong> - Una delle moschee più antiche e importanti</li>
+                                            <li>• <strong>Cairo Copto</strong> - Quartiere cristiano storico con chiese antiche</li>
+                                            <li>• <strong>Khan Al-Khalili Bazaar</strong> - Il famoso mercato tradizionale</li>
+                                            <li>• <strong>Cittadella di Saladino</strong> - Fortezza medievale con vista sul Cairo</li>
+                                            <li>• <strong>Via Islamica di Al-Moezz</strong> - Passeggiata nella strada storica medievale</li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div class="flex items-start">
+                                <div class="flex items-start bg-purple-50 p-2 rounded">
                                     <span class="mr-2">🛍️</span>
                                     <div>
-                                        <strong>Bazar tradizionali - Khan el-Khalili</strong>
-                                        <p class="text-xs text-gray-600">Immersione nella cultura locale e tempo per shopping</p>
+                                        <strong>Shopping a Khan el-Khalili</strong>
+                                        <p class="text-xs text-gray-600">🎯 Suggerito - Tempo libero per contrattazione e acquisti</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start bg-purple-50 p-2 rounded">
+                                    <span class="mr-2">🏛️</span>
+                                    <div>
+                                        <strong>Museo della Civiltà Egizia</strong>
+                                        <p class="text-xs text-gray-600">🎯 Suggerito - Vicino al bazaar, con le mummie reali</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
                                     <span class="mr-2">🍽️</span>
                                     <div>
-                                        <strong>Pranzo e cena liberi</strong>
+                                        <strong>Pranzo e cena</strong>
                                         <p class="text-xs text-gray-600">Non inclusi nel pacchetto</p>
                                     </div>
                                 </div>
@@ -427,14 +510,13 @@
                         <div class="bg-gray-50 border-l-4 border-gold p-4 rounded">
                             <div class="flex items-center mb-3">
                                 <span class="text-3xl mr-3">5️⃣</span>
-                                <h4 class="font-semibold text-gray-800 title-font text-lg">Giorno 5 - Check-out e saluti</h4>
+                                <h4 class="font-semibold text-gray-800 title-font text-lg">Giorno 5 - Check-out e rientro</h4>
                             </div>
                             <div class="space-y-2 text-sm text-gray-700 ml-12">
                                 <div class="flex items-start">
                                     <span class="mr-2">🍳</span>
                                     <div>
                                         <strong>Colazione in hotel (INCLUSA)</strong>
-                                        <p class="text-xs text-gray-600">Quarta e ultima colazione</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
@@ -444,10 +526,17 @@
                                         <p class="text-xs text-gray-600">Preparazione bagagli e saluti al Cairo</p>
                                     </div>
                                 </div>
+                                <div class="flex items-start bg-yellow-50 p-2 rounded border-l-2 border-yellow-600">
+                                    <span class="mr-2">⚠���</span>
+                                    <div>
+                                        <strong>IMPORTANTE - Check-in in aeroporto</strong>
+                                        <p class="text-xs text-gray-600 font-semibold">NON è possibile fare il check-in online per il volo di rientro. Tutti i check-in devono essere effettuati in aeroporto allo sportello. Il check-in può richiedere tempo, quindi arrivare IN AEROPORTO ALMENO 3 ORE PRIMA della partenza del volo.</p>
+                                    </div>
+                                </div>
                                 <div class="flex items-start">
                                     <span class="mr-2">✈️</span>
                                     <div>
-                                        <strong>Rientro in aeroporto per il volo di ritorno</strong>
+                                        <strong>Volo di ritorno</strong>
                                         <p class="text-xs text-gray-600">Volo NON incluso nel pacchetto</p>
                                     </div>
                                 </div>
@@ -459,10 +548,8 @@
                             <ul class="text-sm space-y-1 text-gray-700">
                                 <li>🏨 <strong>Sistemazione:</strong> 4 notti in camere multiple con bagno privato</li>
                                 <li>🍳 <strong>Colazioni:</strong> 4 colazioni in hotel</li>
-                                <li>👨‍🏫 <strong>Guide locali:</strong> Giorni 2, 3 e 4 (Piramidi, Museo, quartiere islamico)</li>
+                                <li>👨‍🏫 <strong>Guide locali:</strong> Giorni 2 e 4 (Piramidi e quartiere islamico)</li>
                                 <li>🚐 <strong>Transfer privato A/R:</strong> Per le Piramidi di Giza (giorno 2)</li>
-                                <li>⛵ <strong>Traversata sul Nilo in feluca:</strong> Esperienza tradizionale (giorno 3)</li>
-                                <li>🏛️ <strong>Visita a Menfi:</strong> Antica capitale egizia (giorno 3)</li>
                                 <li>🩺 <strong>Assicurazione medico-bagaglio:</strong> Copertura completa</li>
                             </ul>
                         </div>
@@ -475,20 +562,26 @@
                                 <li>🥤 <strong>Bevande:</strong> Acqua, soft drinks, alcolici</li>
                                 <li>🔺 <strong>Ingressi interni alle piramidi:</strong> Biglietti opzionali a pagamento</li>
                                 <li>🎁 <strong>Attività opzionali:</strong> Quad, cammelli, spettacoli (coperti da cassa comune)</li>
-                                <li>💰 <strong>Spese personali:</strong> Souvenir, shopping, mance individuali</li>
+                                <li>🎁 <strong>Spese personali:</strong> Souvenir, shopping, mance individuali</li>
                             </ul>
                         </div>
 
                         <div class="bg-purple-50 p-4 rounded border-l-4 border-gold">
-                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🎭 Attività Extra Opzionali (Cassa Comune)</h4>
-                            <p class="text-sm text-gray-700 mb-2">Queste attività possono essere aggiunte tramite la cassa comune (circa 200€):</p>
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🎭 Attività Extra Opzionali (NON Incluse nel Pacchetto WeRoad)</h4>
+                            <p class="text-sm text-gray-700 mb-2">Queste attività NON sono incluse nel pacchetto WeRoad, ma possono essere aggiunte tramite cassa comune, a discrezione della coordinatrice e a seconda delle preferenze del gruppo:</p>
                             <ul class="text-sm space-y-1 text-gray-700">
                                 <li>🏜️ <strong>Quad nel deserto:</strong> Safari avventuroso tra le dune</li>
-                                <li>🔺 <strong>Ingressi interni piramidi:</strong> Esplorare le camere sepolcrali</li>
-                                <li>🐪 <strong>Giro in cammello:</strong> Esperienza tradizionale</li>
-                                <li>🎭 <strong>Spettacolo Suoni e Luci:</strong> Show notturno alle Piramidi</li>
-                                <li>💃 <strong>Danza del ventre:</strong> Serata culturale con cena</li>
+                                <li>🔺 <strong>Ingresso interno Piramide di Cheope:</strong> Esplorare le camere sepolcrali della Grande Piramide</li>
+                                <li>🔺 <strong>Altri ingressi interni piramidi:</strong> Chefren, Micerino</li>
+                                <li>🐪 <strong>Giro in cammello:</strong> Esperienza tradizionale nel deserto</li>
+                                <li>🎭 <strong>Spettacolo Suoni e Luci alle Piramidi:</strong> Show notturno multimediale</li>
+                                <li>💃 <strong>Danza del ventre con cena:</strong> Serata culturale tradizionale</li>
+                                <li>🏛️ <strong>Saqqara e Memphis con transfer privato:</strong> Visita alla necropoli di Saqqara (piramide a gradoni di Djoser) e antica capitale Memphis con guida egittologa privata e veicolo climatizzato</li>
+                                <li>🏛️ <strong>GEM (Grand Egyptian Museum):</strong> Il nuovo grande museo egizio</li>
+                                <li>⛵ <strong>Navigazione sul Nilo in feluca:</strong> Giro in barca a vela tradizionale</li>
+                                <li>🚢 <strong>Cena crociera sul Nilo:</strong> Cena con spettacolo a bordo di un battello tradizionale</li>
                             </ul>
+                            <p class="text-xs text-gray-600 mt-3 italic">💡 Nota: Verificare disponibilità e prezzi con la guida locale.</p>
                         </div>
                     </div>
                 `
@@ -498,11 +591,11 @@
                 content: `
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-amber-50 p-4 rounded-lg border-2 border-gold">
-                            <h4 class="font-semibold text-gray-800 mb-3 title-font">📄 Documenti Essenziali</h4>
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">�� Documenti Essenziali</h4>
                             <ul class="text-sm space-y-1 text-gray-700">
-                                <li>🛂 <strong>Passaporto valido</strong> (min. 6 mesi)</li>
-                                <li>📋 <strong>Visto turistico</strong> - 25 USD (ottenibile online o all'arrivo)</li>
-                                <li>💳 Copie dei documenti (anche digitali)</li>
+                                <li>🛂 <strong>Passaporto valido</strong> (min. 6 mesi) - Vale anche solo il documento di identità, a specifiche condizioni. <a href="https://ambilcairo.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-italiano/ingresso-in-egitto-sicurezza/" target="_blank" rel="noopener noreferrer" class="text-gold underline">Vedi info complete sul sito dell'Ambasciata</a></li>
+                                <li>📝 <strong>Visto turistico</strong> - 25 USD (ottenibile online o all'arrivo)</li>
+                                <li>📄 Copie dei documenti (anche digitali)</li>
                                 <li>💵 Dollari USD per visto e mance</li>
                                 <li>📱 Assicurazione viaggio (medico-bagaglio INCLUSA)</li>
                             </ul>
@@ -532,9 +625,9 @@
                             <ul class="text-sm space-y-1 text-gray-700">
                                 <li>💊 Medicinali personali (con ricetta)</li>
                                 <li>💊 Antidiarroico e fermenti lattici</li>
-                                <li>🤒 Antidolorifico/antipiretico</li>
+                                <li>💊 Antidolorifico/antipiretico</li>
                                 <li>🩹 Cerotti e disinfettante</li>
-                                <li>💧 Salviette disinfettanti</li>
+                                <li>🧼 Salviette disinfettanti</li>
                                 <li>🦟 Repellente per insetti</li>
                             </ul>
                         </div>
@@ -548,15 +641,6 @@
                                 <li>🎧 Cuffie</li>
                             </ul>
                         </div>
-                        <div class="bg-green-50 p-4 rounded-lg border-2 border-gold">
-                            <h4 class="font-semibold text-gray-800 mb-3 title-font">💧 Idratazione</h4>
-                            <ul class="text-sm space-y-1 text-gray-700">
-                                <li>💧 Borraccia riutilizzabile (ESSENZIALE!)</li>
-                                <li>💰 Soldi per comprare acqua in bottiglia</li>
-                                <li>🚰 NON bere mai acqua del rubinetto!</li>
-                                <li>🧊 Evita ghiaccio nelle bevande</li>
-                            </ul>
-                        </div>
                         <div class="bg-purple-50 p-4 rounded-lg border-2 border-gold">
                             <h4 class="font-semibold text-gray-800 mb-3 title-font">💰 Denaro</h4>
                             <ul class="text-sm space-y-1 text-gray-700">
@@ -564,7 +648,7 @@
                                 <li>💵 <strong>Banconote piccole per mance</strong> (1-5 USD) - ESSENZIALE!</li>
                                 <li>💳 Carta di credito (Visa/Mastercard)</li>
                                 <li>🏦 ATM disponibili per prelievi in valuta locale (EGP)</li>
-                                <li>💶 Cassa comune: circa 200 € (per attività extra)</li>
+                                <li>💶 Cassa comune: circa 220€ (per attività extra)</li>
                                 <li>⚠️ <strong>Contante necessario:</strong> Molti servizi NON accettano carte</li>
                             </ul>
                         </div>
@@ -572,7 +656,7 @@
                             <h4 class="font-semibold text-gray-800 mb-3 title-font">🎁 Extra Utili</h4>
                             <ul class="text-sm space-y-1 text-gray-700">
                                 <li>🎒 Zaino piccolo per escursioni</li>
-                                <li>📓 Taccuino e penna</li>
+                                <li>💧 Borraccia riutilizzabile (ESSENZIALE!)</li>
                                 <li>🧺 Busta per biancheria sporca</li>
                                 <li>🧻 Fazzoletti e salviette umidificate</li>
                                 <li>🔦 Torcia (utile per tombe e piramidi)</li>
@@ -590,36 +674,32 @@
                     <div class="space-y-4">
                         <div class="hieroglyph-accent text-white p-4 rounded-lg">
                             <h4 class="font-semibold mb-2 title-font">💵 Cassa Comune</h4>
-                            <p class="text-sm mb-2">La cassa comune copre attività extra opzionali e spese condivise non incluse nel pacchetto base.</p>
-                            <p class="text-lg font-bold">Circa 200 € a persona</p>
+                            <p class="text-sm mb-2">La cassa comune è un piccolo tesoro che mettiamo insieme per coprire quelle attività e servizi che non sono inclusi nel pacchetto standard del viaggio. 🏝️</p>
+                            <p class="text-sm mb-2">Ogni partecipante deve contribuire con la sua parte al coordinatore del viaggio all'inizio del tour, durante il primo incontro di benvenuto, in moneta locale. 💵</p>
+                            <p class="text-sm mb-2">Per questo tour, l'importo previsto per la cassa comune è di <strong>220 euro</strong>. Ma attenzione! Questa cifra potrebbe variare, a seconda delle attività che il gruppo deciderà di fare. La cassa comune serve a togliervi dal pensiero di pagare ogni giorno per ogni cosa. Il coordinatore se ne occupa, così vi rilassate e godete l'avventura! 😎</p>
                         </div>
 
                         <div class="bg-green-50 p-4 rounded-lg border-2 border-gold">
-                            <h4 class="font-semibold text-gray-800 mb-3 title-font">✅ Cosa può coprire la cassa comune (circa 200€)</h4>
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">✅ Cosa include la cassa comune</h4>
                             <ul class="text-sm space-y-1 text-gray-700">
-                                <li>🏜️ Quad nel deserto e attività avventura</li>
-                                <li>🔺 Ingressi opzionali interni alle piramidi</li>
-                                <li>🎭 Spettacoli serali (Suoni e Luci, danza del ventre)</li>
-                                <li>🐪 Giri in cammello</li>
-                                <li>👏 <strong>Mance OBBLIGATORIE</strong> per guide e autisti ($5/persona/giorno)</li>
-                                <li>🍽️ Eventuale cena di gruppo</li>
+                                <li>🎫 <strong>Attività extra scelte dal gruppo</strong> (biglietti per musei, escursioni, passeggiate turistiche)</li>
+                                <li>🛣️ <strong>Tasse e pedaggi</strong> (perché ci sono sempre da pagare!)</li>
+                                <li>🚗 <strong>Trasporti locali</strong> (salite in tuk tuk, jeep e chi più ne ha più ne metta)</li>
+                                <li>��� <strong>Mance generali</strong> (per premiare i nostri fantastici autisti e guide)</li>
+                                <li>😉 <strong>La quota del coordinatore</strong> (sì, proprio quella persona che vi farà divertire e scoprire ogni angolo del paese)</li>
                             </ul>
                         </div>
 
                         <div class="bg-red-50 p-4 rounded-lg border-2 border-gold">
-                            <h4 class="font-semibold text-gray-800 mb-3 title-font">❌ Cosa NON è incluso nel pacchetto base</h4>
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">❌ Cosa NON è incluso nella cassa comune</h4>
                             <ul class="text-sm space-y-1 text-gray-700">
-                                <li>✈️ Voli internazionali A/R dall'Italia</li>
-                                <li>🛂 Visto turistico (25 USD all'arrivo, o online)</li>
-                                <li>🍽️ Pasti extra (4 pranzi + 4 cene)</li>
-                                <li>🥤 Bevande durante i pasti</li>
-                                <li>🔺 Ingressi opzionali nelle piramidi</li>
-                                <li>🎁 Souvenir e shopping personale</li>
+                                <li>🍕🍜 <strong>Cibo o pasti</strong>, a meno che non si tratti di un menù fisso. Ognuno ha i suoi gusti, giusto?</li>
+                                <li>👥 <strong>Attività quando il gruppo si divide</strong> in sottogruppi per attività diverse</li>
                             </ul>
                         </div>
 
                         <div class="bg-yellow-50 p-4 rounded-lg border-2 border-gold">
-                            <h4 class="font-semibold text-gray-800 mb-3 title-font">💸 Spese Extra da Considerare</h4>
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">���� Spese Extra da Considerare</h4>
                             <ul class="text-sm space-y-2 text-gray-700">
                                 <li>
                                     <strong>🛂 Visto turistico:</strong> 25 USD (pagamento in contanti all'arrivo, o online prima della partenza)
@@ -634,13 +714,13 @@
                                     <strong>🍷 Alcol:</strong> Limitato - birra e vino disponibili in zone turistiche, cocktail solo in alcuni hotel
                                 </li>
                                 <li>
-                                    <strong>🐪 Giro in cammello:</strong> 10-20 USD (coperto da cassa comune)
+                                    <strong>🐪 Giro in cammello:</strong> 10-20 USD
                                 </li>
                                 <li>
-                                    <strong>🎭 Spettacolo Suoni e Luci:</strong> 15-25 USD (coperto da cassa comune)
+                                    <strong>🎭 Spettacolo Suoni e Luci:</strong> 15-25 USD
                                 </li>
                                 <li>
-                                    <strong>🏜️ Quad nel deserto:</strong> 30-50 USD (coperto da cassa comune)
+                                    <strong>🏜️ Quad nel deserto:</strong> 30-50 USD
                                 </li>
                                 <li>
                                     <strong>🎁 Souvenir:</strong> Budget personale (contrattazione necessaria!)
@@ -664,21 +744,24 @@
                         </div>
 
                         <div class="bg-purple-50 p-4 rounded-lg border-2 border-gold">
-                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🏦 Valuta e Cambio</h4>
-                            <ul class="text-sm space-y-1 text-gray-700">
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🏦 Valuta e Cambio (EGP)</h4>
+                            <ul class="text-sm space-y-2 text-gray-700">
                                 <li>💵 <strong>Valuta ufficiale:</strong> Lira Egiziana (EGP)</li>
-                                <li>💱 <strong>Cambio approssimativo:</strong> 1 USD ≈ 30-50 EGP (variabile)</li>
+                                <li>💱 <strong>Cambio approssimativo:</strong> 1 USD ��� 30-50 EGP (variabile)</li>
                                 <li>💵 <strong>Dollari USD accettati:</strong> Per visto, mance, alcuni negozi turistici</li>
-                                <li>💳 <strong>Carte di credito:</strong> Accettate in grandi hotel e ristoranti turistici</li>
-                                <li>🏧 <strong>ATM ampiamente disponibili:</strong> In aeroporto e centri commerciali</li>
-                                <li>⚠️ <strong>Contante necessario:</strong> Per la maggior parte delle transazioni quotidiane</li>
-                                <li>💡 <strong>Consiglio:</strong> Cambia piccole somme, usa USD per mance</li>
+                                <li>💳 <strong>Carte di credito:</strong> Accettate in grandi hotel e ristoranti turistici principali</li>
+                                <li>🏧 <strong>ATM/Bancomat:</strong> MOLTO più facili da trovare rispetto ai cambiavalute, specialmente fuori dal Cairo. Disponibili in tutti gli hotel (di solito vicino alla reception) e banche diffuse nelle città</li>
+                                <li>⚠️ <strong>ATTENZIONE Aeroporto:</strong> Commissioni di cambio MOLTO ALTE in aeroporto! Meglio prelevare da ATM</li>
+                                <li>💡 <strong>CONSIGLIATO:</strong> Fai un primo prelievo in valuta locale (EGP) all'ATM in aeroporto subito all'arrivo</li>
+                                <li>💰 <strong>IMPORTANTE - Contante ESSENZIALE:</strong> La maggior parte di ristoranti, negozi di cibo, bar NON accettano carte. Devi SEMPRE avere abbastanza contante con te</li>
+                                <li>🏨 <strong>Hotel e ristoranti principali:</strong> Quasi sempre possibile pagare con carta</li>
+                                <li>🛍️ <strong>Tutte le altre spese:</strong> Da fare quasi esclusivamente in contanti</li>
                             </ul>
                         </div>
 
                         <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
                             <p class="text-sm"><strong>💡 Budget Consigliato Totale:</strong></p>
-                            <p class="text-sm mt-2">200€ cassa comune + 100-150 USD extra per pasti, acqua e piccole spese personali</p>
+                            <p class="text-sm mt-2">220€ cassa comune + 100-150 USD extra per pasti, acqua e piccole spese personali</p>
                         </div>
                     </div>
                 `
@@ -705,7 +788,7 @@
                                 <li>🎫 <strong>Permessi foto:</strong> Alcuni musei richiedono biglietto extra per fotocamere</li>
                                 <li>🚫 <strong>Flash vietato:</strong> In musei e tombe per preservare i reperti</li>
                                 <li>👥 <strong>Foto con persone:</strong> Chiedi sempre il permesso ai locali</li>
-                                <li>🐪 <strong>Cammelli:</strong> Bellissimi per foto, ma pattuisci il prezzo PRIMA!</li>
+                                <li>🐫 <strong>Cammelli:</strong> Bellissimi per foto, ma pattuisci il prezzo PRIMA!</li>
                                 <li>🚫 <strong>Divieti assoluti:</strong> NON fotografare installazioni militari o aeroporti</li>
                             </ul>
                         </div>
@@ -713,7 +796,7 @@
                 `
             },
             'info-utili': {
-                title: '📋 Info Utili',
+                title: '���� Info Utili',
                 content: `
                     <div class="space-y-4">
                         <div class="bg-amber-50 p-4 rounded-lg border-2 border-gold">
@@ -721,11 +804,11 @@
                             <ul class="text-sm space-y-2 text-gray-700">
                                 <li>👗 <strong>Dress code:</strong> Abbigliamento rispettoso, spalle e ginocchia coperte (soprattutto donne)</li>
                                 <li>🧕 <strong>Moschee - OBBLIGATORIO:</strong> Donne devono coprire testa e spalle con sciarpa, pantaloni/gonne lunghe. Uomini: pantaloni lunghi</li>
-                                <li>👞 <strong>Moschee:</strong> Togliere le scarpe prima di entrare</li>
+                                <li>👟 <strong>Moschee:</strong> Togliere le scarpe prima di entrare</li>
                                 <li>🤝 <strong>Saluti:</strong> "As-salamu alaykum" (la pace sia con te)</li>
                                 <li>🍷 <strong>Alcol:</strong> Limitato - birra e vino disponibili in zone turistiche, cocktail solo in alcuni hotel</li>
                                 <li>📸 <strong>Fotografie:</strong> Chiedere il permesso prima di fotografare persone</li>
-                                <li>👫 <strong>Affetto pubblico:</strong> Evitare dimostrazioni eccessive</li>
+                                <li>💑 <strong>Affetto pubblico:</strong> Evitare dimostrazioni eccessive</li>
                             </ul>
                         </div>
 
@@ -749,16 +832,18 @@
                                 <li>🌡️ <strong>Temperature:</strong> Clima mite, 20-25°C di giorno, fresco di sera (15-18°C)</li>
                                 <li>💧 <strong>Umidità:</strong> Molto bassa, clima secco</li>
                                 <li>☀️ <strong>Sole:</strong> Intenso, protezione solare ESSENZIALE</li>
-                                <li>🌙 <strong>Escursione termica:</strong> Grande differenza giorno/notte, porta felpa!</li>
+                                <li>�� <strong>Escursione termica:</strong> Grande differenza giorno/notte, porta felpa!</li>
                                 <li>🌤️ <strong>Piogge:</strong> Rarissime in gennaio</li>
                             </ul>
                         </div>
 
                         <div class="bg-red-50 p-4 rounded-lg border-2 border-gold">
-                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🚰 Sicurezza Alimentare</h4>
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🥤 Sicurezza Alimentare & Idratazione</h4>
                             <ul class="text-sm space-y-2 text-gray-700">
-                                <li>💧 <strong>Acqua:</strong> SOLO in bottiglia sigillata, mai dal rubinetto</li>
+                                <li>💧 <strong>Acqua:</strong> SOLO in bottiglia sigillata, mai dal rubinetto. Bevi MOLTA acqua per il clima desertico!</li>
+                                <li>🚰 <strong>Borraccia riutilizzabile:</strong> ESSENZIALE per riempire con acqua in bottiglia durante le escursioni</li>
                                 <li>🧊 <strong>Ghiaccio:</strong> Evitare nelle bevande</li>
+                                <li>💰 <strong>Budget acqua:</strong> 0,5-1 USD a bottiglia, prevedi di comprarne diverse al giorno</li>
                                 <li>🥗 <strong>Insalate crude:</strong> Evitare, preferire verdure cotte</li>
                                 <li>🍉 <strong>Frutta:</strong> Solo se sbucciata da te</li>
                                 <li>🍽️ <strong>Ristoranti:</strong> Preferire quelli frequentati da molti clienti</li>
@@ -770,7 +855,7 @@
                             <h4 class="font-semibold text-gray-800 mb-3 title-font">🛍️ Shopping e Contrattazione</h4>
                             <ul class="text-sm space-y-2 text-gray-700">
                                 <li>💰 <strong>Contrattazione:</strong> SEMPRE nei mercati! Inizia a 1/3 del prezzo richiesto</li>
-                                <li>🎭 <strong>È un gioco:</strong> Sorridi, sii gentile, non aver fretta</li>
+                                <li>🎭 <strong>�� un gioco:</strong> Sorridi, sii gentile, non aver fretta</li>
                                 <li>🚶 <strong>Tecnica "walk away":</strong> Funziona quasi sempre!</li>
                                 <li>🎁 <strong>Souvenir popolari:</strong> Papiri, profumi, spezie, gioielli, alabastro</li>
                                 <li>⚠️ <strong>Attenzione:</strong> Molti "antichi" sono riproduzioni moderne</li>
@@ -779,19 +864,203 @@
                         </div>
 
                         <div class="bg-purple-50 p-4 rounded-lg border-2 border-gold">
-                            <h4 class="font-semibold text-gray-800 mb-3 title-font">📱 Connettività</h4>
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">��� Connettività e Internet</h4>
                             <ul class="text-sm space-y-2 text-gray-700">
-                                <li>📶 <strong>SIM locale:</strong> Disponibile in aeroporto (Vodafone, Orange, Etisalat)</li>
-                                <li>💰 <strong>Costo:</strong> 10-20 USD per pacchetto turistico con dati</li>
-                                <li>📡 <strong>WiFi:</strong> Disponibile in hotel e alcuni caffè</li>
-                                <li>💬 <strong>WhatsApp:</strong> Funziona perfettamente, mantieni contatto con gruppo</li>
+                                <li>📶 <strong>SIM locale FORTEMENTE CONSIGLIATA:</strong> Acquistabile subito all'arrivo in aeroporto</li>
+                                <li>📞 <strong>Operatori principali:</strong> Orange e Vodafone (entrambi con buona copertura in tutti i punti dell'itinerario)</li>
+                                <li>🛒 <strong>Dove trovarli:</strong> Entrambi hanno chioschi subito all'arrivo in aeroporto</li>
+                                <li>💰 <strong>Offerta migliore - Orange "El-King Tariff":</strong> circa 150 EGP (€6) per 16 GB su social network e app principali (mappe incluse) + 1000 minuti</li>
+                                <li>📲 <strong>Alternativa e-SIM:</strong> Se hai un telefono compatibile, puoi usare una e-SIM</li>
+                                <li>📡 <strong>WiFi hotel:</strong> Disponibile ma spesso la connessione è scarsa o instabile</li>
+                                <li>⚠️ <strong>WiFi pubblico quasi assente:</strong> Molti locali, ristoranti e bar NON hanno wi-fi disponibile</li>
+                                <li>💡 <strong>RACCOMANDAZIONE FORTE:</strong> È fortemente consigliato acquistare una SIM locale o e-SIM. La connessione WiFi in hotel è spesso scadente e la maggior parte dei luoghi pubblici non offre WiFi</li>
+                                <li>💬 <strong>WhatsApp:</strong> Funziona perfettamente con SIM locale per mantenerti in contatto con il gruppo</li>
                             </ul>
+                        </div>
+
+                        <div class="bg-gradient-to-br from-indigo-50 to-purple-50 p-5 rounded-xl border-2 border-gold">
+                            <div class="flex items-center mb-4">
+                                <span class="text-3xl mr-3">📋</span>
+                                <h4 class="font-semibold text-gray-800 title-font text-lg">Checklist Pre-Partenza</h4>
+                            </div>
+                            
+                            <div class="space-y-4">
+                                <!-- Documenti -->
+                                <div class="bg-white p-4 rounded-lg">
+                                    <h5 class="font-semibold text-gray-800 mb-3 text-sm flex items-center">
+                                        <span class="text-xl mr-2">📄</span>
+                                        Documenti (da fare ASAP)
+                                    </h5>
+                                    <ul class="text-sm space-y-2 text-gray-700">
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Verificare validità passaporto</strong> (minimo 6 mesi dalla data di rientro) - oppure documento di identità valido a specifiche condizioni</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Richiedere visto turistico</strong> online su <a href="https://visa2egypt.gov.eg" target="_blank" rel="noopener noreferrer" class="text-gold underline">visa2egypt.gov.eg</a> (25 USD) oppure preparare 25 USD in contanti per farlo all'arrivo in aeroporto</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Fare copie documenti</strong> (passaporto, carta d'identità) sia cartacee che digitali (salvate su email/cloud)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Stampare conferma prenotazione hotel</strong> (se disponibile) e volo di ritorno</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Banca e Denaro -->
+                                <div class="bg-white p-4 rounded-lg">
+                                    <h5 class="font-semibold text-gray-800 mb-3 text-sm flex items-center">
+                                        <span class="text-xl mr-2">💰</span>
+                                        Banca e Denaro
+                                    </h5>
+                                    <ul class="text-sm space-y-2 text-gray-700">
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Avvisare la banca del viaggio</strong> in Egitto (date esatte) per evitare blocco carta</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">��</span>
+                                            <span><strong>Verificare limiti prelievo all'estero</strong> e commissioni bancomat</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Prelevare 25-50 USD in contanti</strong> (per visto all'arrivo se non fatto online + mance iniziali)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Preparare banconote piccole</strong> da 1-5 USD per mance (ESSENZIALE!)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Preparare 220€ per cassa comune</strong> del gruppo</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Portare carta di credito/debito</strong> Visa o Mastercard come backup</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Salute -->
+                                <div class="bg-white p-4 rounded-lg">
+                                    <h5 class="font-semibold text-gray-800 mb-3 text-sm flex items-center">
+                                        <span class="text-xl mr-2">🏥</span>
+                                        Salute
+                                    </h5>
+                                    <ul class="text-sm space-y-2 text-gray-700">
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Scaricare e stampare</strong> certificato assicurazione viaggio WeRoad (medico-bagaglio inclusa)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Salvare numero assistenza assicurazione</strong> sul telefono (24/7)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Preparare kit farmaci:</strong> antidiarroico, fermenti lattici, antidolorifico, antipiretico, cerotti, disinfettante</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Portare medicinali personali</strong> con ricetta medica (in valigia + bagaglio a mano)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Comprare crema solare SPF 50+</strong> (portane TANTA!) e balsamo labbra con SPF</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Tecnologia -->
+                                <div class="bg-white p-4 rounded-lg">
+                                    <h5 class="font-semibold text-gray-800 mb-3 text-sm flex items-center">
+                                        <span class="text-xl mr-2">📱</span>
+                                        Tecnologia
+                                    </h5>
+                                    <ul class="text-sm space-y-2 text-gray-700">
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Scaricare app offline:</strong> Maps.me o Google Maps (scarica mappa del Cairo offline), Google Translate (scarica italiano-arabo offline)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Decidere SIM locale o e-SIM:</strong> Ricerca operatori (Orange/Vodafone) o acquista e-SIM se compatibile</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Verificare piano roaming</strong> del tuo operatore (costi per chiamate/dati in Egitto)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Caricare completamente power bank</strong> e portare cavi caricabatterie (USB-C, Lightning, Micro-USB)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Verificare adattatore prese:</strong> Egitto usa spine tipo C (europea) e tipo G (UK) - porta adattatore universale</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Fare backup foto e documenti</strong> su cloud (Google Drive, iCloud, Dropbox)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Liberare spazio memoria telefono</strong> per nuove foto e video</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Ultimo Check -->
+                                <div class="bg-white p-4 rounded-lg">
+                                    <h5 class="font-semibold text-gray-800 mb-3 text-sm flex items-center">
+                                        <span class="text-xl mr-2">🎒</span>
+                                        Ultimo Check (1-2 giorni prima)
+                                    </h5>
+                                    <ul class="text-sm space-y-2 text-gray-700">
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Controllare peso bagaglio:</strong> Verifica limiti della compagnia aerea (solitamente 23kg stiva + 8kg cabina)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Preparare bagaglio a mano</strong> con essenziali: documenti, soldi, farmaci, power bank, cambio abiti</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Stampare documenti importanti:</strong> Volo, hotel (se disponibile), assicurazione, contatti emergenza</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Informare famiglia/amici</strong> dell'itinerario e condividere contatti di emergenza</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Salvare contatti importanti</strong> sul telefono: Ambasciata Italiana (+20 100 1631 157), coordinatore WeRoad, gruppo WhatsApp</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Check-in volo andata</strong> online 24-48h prima (se disponibile per la tua compagnia)</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <span class="mr-2">☐</span>
+                                            <span><strong>Controllare meteo Cairo</strong> per ultimi aggiustamenti abbigliamento</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 bg-gradient-to-r from-indigo-100 to-purple-100 p-3 rounded-lg text-center">
+                                <p class="text-xs text-gray-700"><strong>💡 Consiglio:</strong> Stampa questa checklist e spunta ogni voce man mano che la completi! ✅</p>
+                            </div>
                         </div>
 
                         <div class="bg-orange-50 p-4 rounded-lg border-2 border-gold">
                             <h4 class="font-semibold text-gray-800 mb-3 title-font">🚗 Trasporti & Sicurezza</h4>
                             <ul class="text-sm space-y-2 text-gray-700">
-                                <li>🚗 <strong>Trasporti consigliati:</strong> Taxi ufficiali, Uber o Careem</li>
+                                <li>🚕 <strong>Trasporti consigliati:</strong> Taxi ufficiali, Uber o Careem</li>
                                 <li>🚫 <strong>NON consigliati:</strong> Autobus locali e metro (per turisti)</li>
                                 <li>💰 <strong>Prezzo taxi:</strong> Pattuisci SEMPRE la tariffa prima di partire</li>
                                 <li>⚠️ <strong>Sicurezza pedonale:</strong> Attenzione! Guidatori imprevedibili, marciapiedi rari</li>
@@ -803,7 +1072,7 @@
 
                         <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
                             <p class="text-sm"><strong>💡 Consiglio d'Oro:</strong></p>
-                            <p class="text-sm mt-2">L'Egitto è un paese sicuro per i turisti. Usa il buon senso, rispetta la cultura locale, e goditi questa esperienza unica nella storia dell'umanità! 🏺✨</p>
+                            <p class="text-sm mt-2">L'Egitto ���� un paese sicuro per i turisti. Usa il buon senso, rispetta la cultura locale, e goditi questa esperienza unica nella storia dell'umanità! 🏺✨</p>
                         </div>
                     </div>
                 `
@@ -825,17 +1094,17 @@
                                 <li>🔺 <strong>Piramidi:</strong> Tombe monumentali per l'aldilà dei faraoni</li>
                                 <li>📜 <strong>Geroglifici:</strong> Sistema di scrittura sacra con oltre 700 simboli</li>
                                 <li>⚱️ <strong>Mummificazione:</strong> Processo di 70 giorni per preservare il corpo</li>
-                                <li>🌾 <strong>Il Nilo:</strong> Cuore della civiltà, fonte di vita e prosperità</li>
+                                <li>🌊 <strong>Il Nilo:</strong> Cuore della civiltà, fonte di vita e prosperità</li>
                             </ul>
                         </div>
 
                         <div class="bg-blue-50 p-4 rounded-lg border-2 border-gold">
                             <h4 class="font-semibold text-gray-800 mb-3 title-font">🏛️ Divinità Principali</h4>
                             <ul class="text-sm space-y-2 text-gray-700">
-                                <li>☀️ <strong>Ra:</strong> Dio del sole, creatore supremo</li>
+                                <li>�����️ <strong>Ra:</strong> Dio del sole, creatore supremo</li>
                                 <li>🦅 <strong>Horus:</strong> Dio del cielo, protettore dei faraoni (testa di falco)</li>
                                 <li>👑 <strong>Osiride:</strong> Dio dell'aldilà e della rinascita</li>
-                                <li>🪶 <strong>Iside:</strong> Dea della magia e della maternità</li>
+                                <li>👸 <strong>Iside:</strong> Dea della magia e della maternità</li>
                                 <li>⚡ <strong>Anubi:</strong> Dio della mummificazione (testa di sciacallo)</li>
                                 <li>🐱 <strong>Bastet:</strong> Dea della casa e della fertilità (testa di gatto)</li>
                                 <li>🦆 <strong>Thoth:</strong> Dio della saggezza e della scrittura (testa di ibis)</li>
@@ -848,7 +1117,7 @@
                                 <li>👁️ <strong>Occhio di Horus:</strong> Protezione, guarigione, potere reale</li>
                                 <li>☥ <strong>Ankh:</strong> Chiave della vita, simbolo di vita eterna</li>
                                 <li>🪲 <strong>Scarabeo:</strong> Rinascita, trasformazione, protezione</li>
-                                <li>🌸 <strong>Loto:</strong> Purezza, creazione, rinascita quotidiana del sole</li>
+                                <li>��� <strong>Loto:</strong> Purezza, creazione, rinascita quotidiana del sole</li>
                                 <li>🐍 <strong>Cobra (Ureo):</strong> Potere divino, protezione faraonica</li>
                                 <li>🪶 <strong>Piuma di Maat:</strong> Verità, giustizia, equilibrio cosmico</li>
                             </ul>
@@ -858,7 +1127,7 @@
                             <h4 class="font-semibold text-gray-800 mb-3 title-font">⚱️ L'Aldilà e la Mummificazione</h4>
                             <p class="text-sm text-gray-700 mb-2">Gli Egizi credevano nella vita dopo la morte:</p>
                             <ul class="text-sm space-y-2 text-gray-700">
-                                <li>💼 <strong>Processo:</strong> 70 giorni di mummificazione, rimozione organi, essicazione</li>
+                                <li>🏥 <strong>Processo:</strong> 70 giorni di mummificazione, rimozione organi, essicazione</li>
                                 <li>🏺 <strong>Vasi canopi:</strong> Contenevano stomaco, intestino, fegato, polmoni</li>
                                 <li>❤️ <strong>Il cuore:</strong> Lasciato nel corpo, sede dell'anima e intelligenza</li>
                                 <li>⚖️ <strong>Giudizio di Osiride:</strong> Il cuore pesato contro la piuma di Maat</li>
@@ -870,14 +1139,14 @@
                         <div class="bg-red-50 p-4 rounded-lg border-2 border-gold">
                             <h4 class="font-semibold text-gray-800 mb-3 title-font">🍽️ Cucina Egiziana</h4>
                             <ul class="text-sm space-y-2 text-gray-700">
-                                <li>🍞 <strong>Aish Baladi:</strong> Pane pita tradizionale (base di ogni pasto)</li>
+                                <li>🥖 <strong>Aish Baladi:</strong> Pane pita tradizionale (base di ogni pasto)</li>
                                 <li>🫘 <strong>Ful Medames:</strong> Fave stufate, piatto nazionale</li>
                                 <li>🥙 <strong>Ta'ameya:</strong> Falafel egiziani (con fave, non ceci)</li>
                                 <li>🍝 <strong>Koshari:</strong> Mix di riso, pasta, lenticchie, salsa pomodoro</li>
                                 <li>🥩 <strong>Kebab e Kofta:</strong> Carne grigliata marinata</li>
-                                <li>🫔 <strong>Mahshi:</strong> Verdure ripiene di riso e carne</li>
+                                <li>🫑 <strong>Mahshi:</strong> Verdure ripiene di riso e carne</li>
                                 <li>🍰 <strong>Baklava:</strong> Dolce con pasta fillo, miele e noci</li>
-                                <li>🧃 <strong>Karkadeh:</strong> Tè freddo di ibisco</li>
+                                <li>���� <strong>Karkadeh:</strong> Tè freddo di ibisco</li>
                                 <li>☕ <strong>Qahwa:</strong> Caffè egiziano denso e aromatico</li>
                             </ul>
                         </div>
@@ -890,8 +1159,8 @@
                                 <li>🪒 I sacerdoti si rasavano completamente, anche le sopracciglia, per purezza rituale</li>
                                 <li>📏 La Grande Piramide fu la struttura più alta del mondo per 3800 anni</li>
                                 <li>🔢 Inventarono un calendario di 365 giorni e il sistema decimale</li>
-                                <li>📄 Il papiro è il primo "foglio" della storia, antenato della carta</li>
-                                <li>🏥 Medicina avanzata: chirurgia, dentistica, cure specialistiche</li>
+                                <li>📜 Il papiro è il primo "foglio" della storia, antenato della carta</li>
+                                <li>💊 Medicina avanzata: chirurgia, dentistica, cure specialistiche</li>
                                 <li>👗 Le parrucche elaborate erano segno di status sociale</li>
                             </ul>
                         </div>
@@ -913,7 +1182,8 @@
 
                         <div class="bg-amber-50 p-4 rounded-lg border-l-4 border-gold">
                             <h4 class="font-semibold text-gray-800 mb-2">🛂 Serve il visto per l'Egitto?</h4>
-                            <p class="text-sm text-gray-700">Sì, gli italiani necessitano di visto turistico. Costo 25 USD, ottenibile online prima della partenza O all'arrivo in aeroporto (porta contanti USD). Validità: 30 giorni. Passaporto deve avere validità residua di almeno 6 mesi.</p>
+                            <p class="text-sm text-gray-700">Sì, gli italiani necessitano di visto turistico. Costo 25 USD, ottenibile online prima della partenza O all'arrivo in aeroporto (porta contanti USD). Validità: 30 giorni.</p>
+                            <p class="text-sm text-gray-700 mt-2"><strong>Documenti accettati:</strong> Passaporto valido (min. 6 mesi) oppure documento di identità a specifiche condizioni. <a href="https://ambilcairo.esteri.it/it/servizi-consolari-e-visti/servizi-per-il-cittadino-italiano/ingresso-in-egitto-sicurezza/" target="_blank" rel="noopener noreferrer" class="text-gold underline">Vedi tutte le info sul sito dell'Ambasciata</a>.</p>
                         </div>
 
                         <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-gold">
@@ -928,7 +1198,7 @@
 
                         <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-gold">
                             <h4 class="font-semibold text-gray-800 mb-2">💰 Quanto costa il viaggio?</h4>
-                            <p class="text-sm text-gray-700">Oltre al pacchetto base: visto (25 USD), cassa comune (200€ - include mance obbligatorie), pasti non inclusi (100-500 EGP locali, 300-1000 EGP turistici), acqua. Budget consigliato: 200€ cassa comune + 100-150 USD extra. IMPORTANTE: Contante necessario per la maggior parte delle transazioni.</p>
+                            <p class="text-sm text-gray-700">Oltre al pacchetto base: visto (25 USD), cassa comune (220€ - include mance, trasporti locali e attività extra), pasti non inclusi (100-500 EGP locali, 300-1000 EGP turistici), acqua. Budget consigliato: 220€ cassa comune + 100-150 USD extra. IMPORTANTE: Contante necessario per la maggior parte delle transazioni.</p>
                         </div>
 
                         <div class="bg-red-50 p-4 rounded-lg border-l-4 border-gold">
@@ -983,7 +1253,378 @@
 
                         <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
                             <p class="text-sm"><strong>💡 Altre domande?</strong></p>
-                            <p class="text-sm mt-2">Contatta il coordinatore del viaggio! Nessuna domanda è stupida quando si tratta della tua prima esperienza in Egitto. 🌟</p>
+                            <p class="text-sm mt-2">Contatta il coordinatore del viaggio! Nessuna domanda è stupida quando si tratta della tua prima esperienza in Egitto. 🐪</p>
+                        </div>
+                    </div>
+                `
+            },
+            'fun-zone': {
+                title: '🎉 Fun Zone',
+                content: `
+                    <div class="space-y-4">
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
+                            <h4 class="font-semibold mb-2 title-font text-lg">Divertimento e Contenuti Extra!</h4>
+                            <p class="text-sm opacity-90">Giochi, sfide e messaggi anonimi per il gruppo</p>
+                        </div>
+
+                        <!-- Navigation Buttons -->
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 bg-white p-3 rounded-lg border-2 border-gold">
+                            <button onclick="document.getElementById('photo-battle').scrollIntoView({behavior: 'smooth', block: 'center'})" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-semibold py-2 px-3 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all">
+                                📸 Photo Battle
+                            </button>
+                            <button onclick="document.getElementById('quiz-section').scrollIntoView({behavior: 'smooth', block: 'center'})" class="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-xs font-semibold py-2 px-3 rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all">
+                                �� Quiz Cultura
+                            </button>
+                            <button onclick="document.getElementById('quiz-practical').scrollIntoView({behavior: 'smooth', block: 'center'})" class="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-semibold py-2 px-3 rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all">
+                                ✈️ Quiz Pratico
+                            </button>
+                            <button onclick="document.getElementById('ngl-section').scrollIntoView({behavior: 'smooth', block: 'center'})" class="bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-semibold py-2 px-3 rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all">
+                                💬 NGL
+                            </button>
+                        </div>
+
+                        <div id="photo-battle" class="bg-gradient-to-br from-purple-100 to-pink-100 p-5 rounded-xl border-2 border-gold">
+                            <div class="flex items-center mb-4">
+                                <span class="text-4xl mr-3">📸</span>
+                                <h4 class="font-bold text-gray-800 title-font text-lg">Photo Battle Quotidiana</h4>
+                            </div>
+                            <p class="text-sm text-gray-700 mb-3">Ogni giorno un gruppo diverso fa una foto che rappresenti l'highlight della giornata. La migliore vince! 🏆</p>
+                            
+                            <div class="bg-white p-4 rounded-lg space-y-4">
+                                <!-- GIORNO 1 -->
+                                <div class="border-2 border-purple-300 rounded-lg p-3 bg-purple-50">
+                                    <div class="font-semibold text-gray-800 mb-3 text-center">Giorno 1️⃣</div>
+                                    <div class="space-y-2">
+                                        <div class="bg-white p-2 rounded border-l-4 border-purple-500">
+                                            <div class="text-xs font-semibold text-purple-700 mb-1">👑 Faraoni del Nilo</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Federica</span>
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Davide</span>
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Antonio</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-purple-500">
+                                            <div class="text-xs font-semibold text-purple-700 mb-1">🦁 Guardiani della Sfinge</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Ivan</span>
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Laura</span>
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Filippo</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-purple-500">
+                                            <div class="text-xs font-semibold text-purple-700 mb-1">🐫 Nomadi del Deserto</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Giorgia</span>
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Francesco</span>
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Lisa</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-purple-500">
+                                            <div class="text-xs font-semibold text-purple-700 mb-1">🌟 Stelle del Deserto</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Mattia</span>
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Angelo</span>
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Veronica</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-purple-500">
+                                            <div class="text-xs font-semibold text-purple-700 mb-1">🏺 Portatori di Anfore</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Arianna</span>
+                                                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">Agnese</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- GIORNO 2 -->
+                                <div class="border-2 border-blue-300 rounded-lg p-3 bg-blue-50">
+                                    <div class="font-semibold text-gray-800 mb-3 text-center">Giorno 2️⃣</div>
+                                    <div class="space-y-2">
+                                        <div class="bg-white p-2 rounded border-l-4 border-blue-500">
+                                            <div class="text-xs font-semibold text-blue-700 mb-1">🪲 Scarabei Sacri</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Laura</span>
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Mattia</span>
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Giorgia</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-blue-500">
+                                            <div class="text-xs font-semibold text-blue-700 mb-1">📜 Custodi di Papiro</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Federica</span>
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Francesco</span>
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Angelo</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-blue-500">
+                                            <div class="text-xs font-semibold text-blue-700 mb-1">☀️ Figli di Ra</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Ivan</span>
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Antonio</span>
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Agnese</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-blue-500">
+                                            <div class="text-xs font-semibold text-blue-700 mb-1">💎 Cercatori di Gemme</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Davide</span>
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Arianna</span>
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Veronica</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-blue-500">
+                                            <div class="text-xs font-semibold text-blue-700 mb-1">🌊 Viaggiatori del Nilo</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Filippo</span>
+                                                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">Lisa</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- GIORNO 3 -->
+                                <div class="border-2 border-green-300 rounded-lg p-3 bg-green-50">
+                                    <div class="font-semibold text-gray-800 mb-3 text-center">Giorno 3️⃣</div>
+                                    <div class="space-y-2">
+                                        <div class="bg-white p-2 rounded border-l-4 border-green-500">
+                                            <div class="text-xs font-semibold text-green-700 mb-1">🔺 Costruttori di Piramidi</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Davide</span>
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Giorgia</span>
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Filippo</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-green-500">
+                                            <div class="text-xs font-semibold text-green-700 mb-1">🐈 Sacerdoti di Bastet</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Ivan</span>
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Mattia</span>
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Lisa</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-green-500">
+                                            <div class="text-xs font-semibold text-green-700 mb-1">👁️ Seguaci di Horus</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Federica</span>
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Laura</span>
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Agnese</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-green-500">
+                                            <div class="text-xs font-semibold text-green-700 mb-1">🌙 Custodi della Notte</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Francesco</span>
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Angelo</span>
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Veronica</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-green-500">
+                                            <div class="text-xs font-semibold text-green-700 mb-1">🔱 Guardiani del Trono</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Arianna</span>
+                                                <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">Antonio</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- GIORNO 4 -->
+                                <div class="border-2 border-yellow-300 rounded-lg p-3 bg-yellow-50">
+                                    <div class="font-semibold text-gray-800 mb-3 text-center">Giorno 4️⃣</div>
+                                    <div class="space-y-2">
+                                        <div class="bg-white p-2 rounded border-l-4 border-yellow-500">
+                                            <div class="text-xs font-semibold text-yellow-700 mb-1">🦆 Scribi di Thoth</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Arianna</span>
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Francesco</span>
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Filippo</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-yellow-500">
+                                            <div class="text-xs font-semibold text-yellow-700 mb-1">⚱️ Guardiani di Osiride</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Mattia</span>
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Davide</span>
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Agnese</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-yellow-500">
+                                            <div class="text-xs font-semibold text-yellow-700 mb-1">🌅 Navigatori del Nilo</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Federica</span>
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Ivan</span>
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Veronica</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-yellow-500">
+                                            <div class="text-xs font-semibold text-yellow-700 mb-1">👸 Regina e Corte</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Laura</span>
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Angelo</span>
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Lisa</span>
+                                            </div>
+                                        </div>
+                                        <div class="bg-white p-2 rounded border-l-4 border-yellow-500">
+                                            <div class="text-xs font-semibold text-yellow-700 mb-1">🏛️ Architetti del Tempio</div>
+                                            <div class="flex flex-wrap gap-1">
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Giorgia</span>
+                                                <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Antonio</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 bg-amber-50 p-3 rounded-lg">
+                                <p class="text-xs text-gray-700"><strong>📝 Regole:</strong></p>
+                                <ul class="text-xs text-gray-600 mt-2 space-y-1 ml-4">
+                                    <li>• Ogni gruppo scatta UNA foto al giorno</li>
+                                    <li>• La foto deve rappresentare l'highlight/momento migliore della giornata</li>
+                                    <li>• Scatti stupidi/alternativi sono i benvenuti</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="quiz-section" class="bg-gradient-to-br from-amber-100 to-orange-100 p-5 rounded-xl border-2 border-gold">
+                            <div class="flex items-center mb-4">
+                                <span class="text-4xl mr-3">🧠</span>
+                                <h4 class="font-bold text-gray-800 title-font text-lg">Quiz Cultura Egiziana</h4>
+                            </div>
+                            <p class="text-sm text-gray-700 mb-4">Metti alla prova la tua conoscenza sull'Egitto! 15 domande sulla cultura, storia e curiosità egiziane 🏺</p>
+                            
+                            <div class="bg-white p-4 rounded-lg">
+                                <div id="quiz-container">
+                                    <div id="quiz-start" class="text-center">
+                                        <div class="text-6xl mb-4">🔺</div>
+                                        <p class="text-sm text-gray-700 mb-4">Sei pronto a testare la tua conoscenza sull'antico Egitto e sul Cairo?</p>
+                                        <button onclick="startQuiz()" class="bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold py-3 px-8 rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all transform hover:scale-105">
+                                            🚀 Inizia Quiz
+                                        </button>
+                                    </div>
+
+                                    <div id="quiz-questions" class="hidden">
+                                        <div class="mb-4 flex justify-between items-center">
+                                            <span class="text-sm font-semibold text-gray-700">Domanda <span id="current-question">1</span>/15</span>
+                                            <span class="text-sm font-semibold text-amber-600">Punteggio: <span id="score">0</span></span>
+                                        </div>
+                                        
+                                        <div class="bg-amber-50 p-4 rounded-lg mb-4">
+                                            <p id="question-text" class="text-sm font-semibold text-gray-800"></p>
+                                        </div>
+
+                                        <div id="answers-container" class="space-y-2">
+                                            <!-- Answers will be inserted here -->
+                                        </div>
+
+                                        <div id="feedback" class="mt-4 p-3 rounded-lg hidden">
+                                            <p id="feedback-text" class="text-sm font-semibold"></p>
+                                            <p id="explanation-text" class="text-xs mt-2"></p>
+                                        </div>
+
+                                        <button id="next-button" onclick="nextQuestion()" class="hidden mt-4 w-full bg-amber-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-amber-600 transition-all">
+                                            Prossima Domanda →
+                                        </button>
+                                    </div>
+
+                                    <div id="quiz-results" class="hidden text-center">
+                                        <div class="text-6xl mb-4" id="result-emoji">🎉</div>
+                                        <h5 class="text-xl font-bold text-gray-800 mb-2">Quiz Completato!</h5>
+                                        <p class="text-3xl font-bold text-amber-600 mb-4"><span id="final-score">0</span>/15</p>
+                                        <p id="result-message" class="text-sm text-gray-700 mb-4"></p>
+                                        <button onclick="restartQuiz()" class="bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold py-3 px-8 rounded-lg hover:from-amber-600 hover:to-orange-600 transition-all transform hover:scale-105">
+                                            🔄 Ricomincia Quiz
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="quiz-practical" class="bg-gradient-to-br from-green-100 to-emerald-100 p-5 rounded-xl border-2 border-gold">
+                            <div class="flex items-center mb-4">
+                                <span class="text-4xl mr-3">✈️</span>
+                                <h4 class="font-bold text-gray-800 title-font text-lg">Quiz Pratico - Preparazione Viaggio</h4>
+                            </div>
+                            <p class="text-sm text-gray-700 mb-4">Sei davvero pronto per partire? Testa le tue conoscenze pratiche su WeRoad, documenti, cosa portare e consigli utili! 🎒</p>
+                            
+                            <div class="bg-white p-4 rounded-lg">
+                                <div id="quiz-practical-container">
+                                    <div id="quiz-practical-start" class="text-center">
+                                        <div class="text-6xl mb-4">🧳</div>
+                                        <p class="text-sm text-gray-700 mb-4">Scopri se sei davvero pronto per il Cairo Express!</p>
+                                        <button onclick="startPracticalQuiz()" class="bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-8 rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all transform hover:scale-105">
+                                            🚀 Inizia Quiz Pratico
+                                        </button>
+                                    </div>
+
+                                    <div id="quiz-practical-questions" class="hidden">
+                                        <div class="mb-4 flex justify-between items-center">
+                                            <span class="text-sm font-semibold text-gray-700">Domanda <span id="current-question-practical">1</span>/20</span>
+                                            <span class="text-sm font-semibold text-green-600">Punteggio: <span id="score-practical">0</span></span>
+                                        </div>
+                                        
+                                        <div class="bg-green-50 p-4 rounded-lg mb-4">
+                                            <p id="question-text-practical" class="text-sm font-semibold text-gray-800"></p>
+                                        </div>
+
+                                        <div id="answers-container-practical" class="space-y-2">
+                                            <!-- Answers will be inserted here -->
+                                        </div>
+
+                                        <div id="feedback-practical" class="mt-4 p-3 rounded-lg hidden">
+                                            <p id="feedback-text-practical" class="text-sm font-semibold"></p>
+                                            <p id="explanation-text-practical" class="text-xs mt-2"></p>
+                                        </div>
+
+                                        <button id="next-button-practical" onclick="nextPracticalQuestion()" class="hidden mt-4 w-full bg-green-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-600 transition-all">
+                                            Prossima Domanda →
+                                        </button>
+                                    </div>
+
+                                    <div id="quiz-practical-results" class="hidden text-center">
+                                        <div class="text-6xl mb-4" id="result-emoji-practical">🎉</div>
+                                        <h5 class="text-xl font-bold text-gray-800 mb-2">Quiz Completato!</h5>
+                                        <p class="text-3xl font-bold text-green-600 mb-4"><span id="final-score-practical">0</span>/20</p>
+                                        <p id="result-message-practical" class="text-sm text-gray-700 mb-4"></p>
+                                        <button onclick="restartPracticalQuiz()" class="bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold py-3 px-8 rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all transform hover:scale-105">
+                                            🔄 Ricomincia Quiz
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="ngl-section" class="bg-gradient-to-br from-blue-100 to-cyan-100 p-5 rounded-xl border-2 border-gold">
+                            <div class="flex items-center mb-4">
+                                <span class="text-4xl mr-3">💬</span>
+                                <h4 class="font-bold text-gray-800 title-font text-lg">NGL - Messaggi Anonimi</h4>
+                            </div>
+                            <p class="text-sm text-gray-700 mb-4">Scrivi messaggi anonimi al gruppo! Condividi curiosità su di te da far indovinare o messaggi simpatici per gli altri 😊</p>
+                            
+                            <div class="bg-white p-4 rounded-lg text-center">
+                                <p class="text-xs text-gray-500 italic mb-3">Link per inviare messaggi anonimi</p>
+                                <a href="https://ngl.link/sabri37471" target="_blank" rel="noopener noreferrer" class="inline-block bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105">
+                                    💬 Invia Messaggio Anonimo
+                                </a>
+                                <p class="text-xs text-gray-400 mt-3">ngl.link/sabri37471</p>
+                            </div>
+
+                            <div class="mt-4 bg-cyan-50 p-3 rounded-lg">
+                                <p class="text-xs text-gray-700 mb-2"><strong>💡 Idee per messaggi:</strong></p>
+                                <ul class="text-xs text-gray-600 space-y-1 ml-4">
+                                    <li>• "Ho un talento nascosto che nessuno conosce... indovina chi sono!"</li>
+                                    <li>• "La mia bevanda preferita è... e adoro mangiarla con..."</li>
+                                    <li>• "Apprezzo tantissimo quando [nome] fa..."</li>
+                                    <li>• "Non l'ho mai detto, ma ho paura di..."</li>
+                                    <li>• "Il mio sogno segreto è..."</li>
+                                    <li>• Complimenti e messaggi simpatici per gli altri del gruppo! 💕</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="hieroglyph-accent text-white p-4 rounded-lg text-center">
+                            <p class="text-sm"><strong>✨ Divertitevi e Create Ricordi Indimenticabili!</strong></p>
+                            <p class="text-xs mt-2 opacity-90">Le migliori avventure nascono dalla spontaneità e dallo spirito di gruppo 🎊</p>
                         </div>
                     </div>
                 `
@@ -997,7 +1638,7 @@
                         </div>
 
                         <div class="bg-red-50 p-4 rounded-lg border-2 border-red-600">
-                            <h4 class="font-semibold text-gray-800 mb-3 title-font">📞 Emergenze Egitto</h4>
+                            <h4 class="font-semibold text-gray-800 mb-3 title-font">🚨 Emergenze Egitto</h4>
                             <ul class="text-sm space-y-2 text-gray-700">
                                 <li class="flex items-center">
                                     <span class="text-2xl mr-3">🆘</span>
@@ -1024,7 +1665,7 @@
                                     </div>
                                 </li>
                                 <li class="flex items-center">
-                                    <span class="text-2xl mr-3">🗺️</span>
+                                    <span class="text-2xl mr-3">🗺�����</span>
                                     <div>
                                         <strong>Polizia Turistica:</strong> 126
                                     </div>
@@ -1089,7 +1730,7 @@
                                 <li>✅ Copertura medica all'estero</li>
                                 <li>✅ Rimpatrio sanitario</li>
                                 <li>✅ Numero di assistenza 24/7</li>
-                                <li>✅ Copia del contratto sempre con te</li>
+                                <li>��� Copia del contratto sempre con te</li>
                             </ul>
                         </div>
 
@@ -1122,6 +1763,541 @@
                 closeModal();
             }
         });
+
+        // Search Functionality
+        const searchInput = document.getElementById('search-input');
+        const searchResults = document.getElementById('search-results');
+        const resultsContainer = document.getElementById('results-container');
+        const clearButton = document.getElementById('clear-search');
+
+        searchInput.addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase().trim();
+            
+            if (query.length === 0) {
+                searchResults.classList.add('hidden');
+                clearButton.classList.add('hidden');
+                return;
+            }
+
+            clearButton.classList.remove('hidden');
+            
+            // Search through all sections
+            const results = [];
+            for (const [sectionId, section] of Object.entries(sections)) {
+                const content = section.content.toLowerCase();
+                const title = section.title.toLowerCase();
+                
+                if (title.includes(query) || content.includes(query)) {
+                    // Extract a snippet around the match
+                    const plainText = section.content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ');
+                    const index = plainText.toLowerCase().indexOf(query);
+                    let snippet = '';
+                    
+                    if (index !== -1) {
+                        const start = Math.max(0, index - 50);
+                        const end = Math.min(plainText.length, index + query.length + 100);
+                        snippet = '...' + plainText.substring(start, end).trim() + '...';
+                    }
+                    
+                    results.push({
+                        id: sectionId,
+                        title: section.title,
+                        snippet: snippet || plainText.substring(0, 150) + '...'
+                    });
+                }
+            }
+
+            // Display results
+            if (results.length > 0) {
+                resultsContainer.innerHTML = results.map(result => `
+                    <div class="bg-white p-3 rounded-lg border border-gold cursor-pointer hover:bg-gray-50 transition-colors" 
+                         onclick="openSection('${result.id}'); clearSearch();">
+                        <div class="font-semibold text-sm text-gray-800 mb-1">${result.title}</div>
+                        <div class="text-xs text-gray-600 line-clamp-2">${result.snippet}</div>
+                    </div>
+                `).join('');
+                searchResults.classList.remove('hidden');
+            } else {
+                resultsContainer.innerHTML = '<div class="text-sm text-gray-500 italic p-3">Nessun risultato trovato</div>';
+                searchResults.classList.remove('hidden');
+            }
+        });
+
+        function clearSearch() {
+            searchInput.value = '';
+            searchResults.classList.add('hidden');
+            clearButton.classList.add('hidden');
+        }
+
+        // Quiz Functionality
+        const quizQuestions = [
+            {
+                question: "Quante piramidi ci sono nel complesso di Giza?",
+                answers: ["2", "3", "5", "7"],
+                correct: 1,
+                explanation: "Ci sono 3 grandi piramidi a Giza: Cheope, Chefren e Micerino."
+            },
+            {
+                question: "Quale piramide è la più grande delle tre?",
+                answers: ["Piramide di Chefren", "Piramide di Cheope", "Piramide di Micerino", "Sono tutte uguali"],
+                correct: 1,
+                explanation: "La Piramide di Cheope è la più grande ed è l'unica delle Sette Meraviglie del Mondo Antico ancora esistente."
+            },
+            {
+                question: "Qual è la valuta ufficiale dell'Egitto?",
+                answers: ["Dollaro Egiziano", "Lira Egiziana (EGP)", "Dirham", "Sterlina"],
+                correct: 1,
+                explanation: "La valuta ufficiale è la Lira Egiziana (EGP), anche chiamata Pound Egiziano."
+            },
+            {
+                question: "Come si chiama la famosa statua con corpo di leone e testa umana a Giza?",
+                answers: ["La Sfinge", "L'Obelisco", "Il Colosso", "Il Guardiano"],
+                correct: 0,
+                explanation: "La Sfinge è il guardiano millenario della necropoli di Giza e rappresenta il faraone Chefren."
+            },
+            {
+                question: "Quale fiume attraversa il Cairo?",
+                answers: ["Tigri", "Eufrate", "Nilo", "Giordano"],
+                correct: 2,
+                explanation: "Il Nilo è il fiume più lungo del mondo e ha dato vita alla civiltà egizia per millenni."
+            },
+            {
+                question: "Quanto dura il processo di mummificazione nell'antico Egitto?",
+                answers: ["7 giorni", "30 giorni", "70 giorni", "100 giorni"],
+                correct: 2,
+                explanation: "Il processo di mummificazione durava circa 70 giorni e includeva la rimozione degli organi e l'essicazione del corpo."
+            },
+            {
+                question: "Come si chiama il mercato tradizionale del Cairo?",
+                answers: ["Grand Bazaar", "Souk Al-Hamidiyah", "Khan el-Khalili", "Spice Market"],
+                correct: 2,
+                explanation: "Khan el-Khalili è il famoso bazar medievale del Cairo, perfetto per shopping e contrattazione!"
+            },
+            {
+                question: "Qual è il piatto nazionale dell'Egitto?",
+                answers: ["Hummus", "Koshari", "Falafel", "Shawarma"],
+                correct: 1,
+                explanation: "Il Koshari è un mix di riso, pasta, lenticchie e salsa di pomodoro, molto economico e gustoso!"
+            },
+            {
+                question: "In quale città egiziana si trovano le piramidi più famose?",
+                answers: ["Luxor", "Alessandria", "Giza", "Aswan"],
+                correct: 2,
+                explanation: "Le piramidi più famose si trovano a Giza, alla periferia del Cairo."
+            },
+            {
+                question: "Quale dio egizio ha la testa di falco?",
+                answers: ["Anubi", "Ra", "Horus", "Thoth"],
+                correct: 2,
+                explanation: "Horus, il dio del cielo, è rappresentato con la testa di falco ed era il protettore dei faraoni."
+            },
+            {
+                question: "Come si chiama il sistema di mance obbligatorio in Egitto?",
+                answers: ["Baksheesh", "Tip", "Propina", "Servizio"],
+                correct: 0,
+                explanation: "Il Baksheesh (o Bakshish) è il sistema di mance tradizionale egiziano ed è considerato obbligatorio."
+            },
+            {
+                question: "Qual è l'animale sacro più venerato nell'antico Egitto?",
+                answers: ["Cane", "Gatto", "Serpente", "Toro"],
+                correct: 1,
+                explanation: "I gatti erano considerati sacri e protetti per legge, associati alla dea Bastet."
+            },
+            {
+                question: "Cosa significa l'Ankh, il simbolo egizio a forma di croce con un anello?",
+                answers: ["Morte", "Potere", "Vita eterna", "Saggezza"],
+                correct: 2,
+                explanation: "L'Ankh è la 'chiave della vita' e simboleggia la vita eterna nell'antico Egitto."
+            },
+            {
+                question: "Per quanti anni è stata la struttura più alta del mondo la Grande Piramide?",
+                answers: ["1000 anni", "2000 anni", "3800 anni", "5000 anni"],
+                correct: 2,
+                explanation: "La Grande Piramide di Cheope è stata la struttura più alta del mondo per circa 3800 anni!"
+            },
+            {
+                question: "Quale tipo di barca tradizionale si usa per navigare sul Nilo?",
+                answers: ["Dhow", "Feluca", "Gondola", "Kayak"],
+                correct: 1,
+                explanation: "La feluca è la tipica barca a vela tradizionale egiziana usata sul Nilo da millenni."
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let quizScore = 0;
+        let selectedAnswer = null;
+
+        function startQuiz() {
+            currentQuestionIndex = 0;
+            quizScore = 0;
+            selectedAnswer = null;
+            document.getElementById('quiz-start').classList.add('hidden');
+            document.getElementById('quiz-questions').classList.remove('hidden');
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const question = quizQuestions[currentQuestionIndex];
+            document.getElementById('current-question').textContent = currentQuestionIndex + 1;
+            document.getElementById('score').textContent = quizScore;
+            document.getElementById('question-text').textContent = question.question;
+            document.getElementById('feedback').classList.add('hidden');
+            document.getElementById('next-button').classList.add('hidden');
+            selectedAnswer = null;
+
+            const answersContainer = document.getElementById('answers-container');
+            answersContainer.innerHTML = question.answers.map((answer, index) => `
+                <button 
+                    onclick="selectAnswer(${index})" 
+                    class="answer-button w-full text-left p-3 rounded-lg border-2 border-gray-300 hover:border-amber-500 transition-all text-sm"
+                    data-index="${index}"
+                >
+                    ${answer}
+                </button>
+            `).join('');
+        }
+
+        function selectAnswer(index) {
+            if (selectedAnswer !== null) return;
+            
+            selectedAnswer = index;
+            const question = quizQuestions[currentQuestionIndex];
+            const isCorrect = index === question.correct;
+            
+            if (isCorrect) {
+                quizScore++;
+                document.getElementById('score').textContent = quizScore;
+            }
+
+            const buttons = document.querySelectorAll('.answer-button');
+            buttons.forEach((button, i) => {
+                button.disabled = true;
+                if (i === question.correct) {
+                    button.classList.remove('border-gray-300');
+                    button.classList.add('border-green-500', 'bg-green-50');
+                } else if (i === index && !isCorrect) {
+                    button.classList.remove('border-gray-300');
+                    button.classList.add('border-red-500', 'bg-red-50');
+                } else {
+                    button.classList.add('opacity-50');
+                }
+            });
+
+            const feedback = document.getElementById('feedback');
+            const feedbackText = document.getElementById('feedback-text');
+            const explanationText = document.getElementById('explanation-text');
+            
+            feedback.classList.remove('hidden', 'bg-green-50', 'bg-red-50');
+            if (isCorrect) {
+                feedback.classList.add('bg-green-50');
+                feedbackText.textContent = '✅ Corretto!';
+                feedbackText.className = 'text-sm font-semibold text-green-700';
+            } else {
+                feedback.classList.add('bg-red-50');
+                feedbackText.textContent = '❌ Sbagliato!';
+                feedbackText.className = 'text-sm font-semibold text-red-700';
+            }
+            
+            explanationText.textContent = question.explanation;
+            explanationText.className = 'text-xs mt-2 text-gray-700';
+            
+            document.getElementById('next-button').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+            
+            if (currentQuestionIndex < quizQuestions.length) {
+                showQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('quiz-questions').classList.add('hidden');
+            document.getElementById('quiz-results').classList.remove('hidden');
+            document.getElementById('final-score').textContent = quizScore;
+            
+            const percentage = (quizScore / quizQuestions.length) * 100;
+            const resultEmoji = document.getElementById('result-emoji');
+            const resultMessage = document.getElementById('result-message');
+            
+            if (percentage === 100) {
+                resultEmoji.textContent = '🏆';
+                resultMessage.textContent = 'Perfetto! Sei un vero esperto dell\'Egitto! 👑';
+            } else if (percentage >= 80) {
+                resultEmoji.textContent = '🎉';
+                resultMessage.textContent = 'Eccellente! Conosci molto bene l\'Egitto! 🌟';
+            } else if (percentage >= 60) {
+                resultEmoji.textContent = '😊';
+                resultMessage.textContent = 'Buon lavoro! Hai una buona conoscenza dell\'Egitto! 👍';
+            } else if (percentage >= 40) {
+                resultEmoji.textContent = '📚';
+                resultMessage.textContent = 'Non male! C\'è ancora molto da imparare! 🔍';
+            } else {
+                resultEmoji.textContent = '🤔';
+                resultMessage.textContent = 'Forse dovresti leggere di più sull\'Egitto prima del viaggio! ���';
+            }
+        }
+
+        function restartQuiz() {
+            document.getElementById('quiz-results').classList.add('hidden');
+            document.getElementById('quiz-start').classList.remove('hidden');
+        }
+
+        // Practical Quiz Functionality
+        const practicalQuizQuestions = [
+            {
+                question: "Quanto costa il visto turistico per l'Egitto?",
+                answers: ["15 USD", "25 USD", "50 USD", "È gratuito"],
+                correct: 1,
+                explanation: "Il visto turistico costa 25 USD e può essere ottenuto online prima della partenza o all'arrivo in aeroporto."
+            },
+            {
+                question: "Quanto contribuisce ogni partecipante alla cassa comune?",
+                answers: ["150€", "220€", "300€", "400€"],
+                correct: 1,
+                explanation: "Ogni partecipante deve contribuire con 220€ alla cassa comune che copre attività extra, mance, trasporti locali e la quota del coordinatore."
+            },
+            {
+                question: "Cos'è la cassa comune in un viaggio WeRoad?",
+                answers: ["Un fondo per emergenze mediche", "Un piccolo tesoro comune per attività extra, mance e trasporti locali", "I soldi per pagare l'hotel", "Un optional non obbligatorio"],
+                correct: 1,
+                explanation: "La cassa comune è un piccolo tesoro che mettiamo insieme per coprire attività e servizi non inclusi nel pacchetto standard. Il coordinatore se ne occupa, così ti rilassi e godi l'avventura!"
+            },
+            {
+                question: "La quota del coordinatore WeRoad è inclusa nella cassa comune?",
+                answers: ["No, il coordinatore paga tutto da sé", "Sì, è inclusa nella cassa comune", "Il coordinatore è pagato direttamente da WeRoad", "Dobbiamo dare una mancia extra al coordinatore"],
+                correct: 1,
+                explanation: "Sì! La quota del coordinatore è inclusa nella cassa comune dei 220€. Il coordinatore è uno di voi, un compagno di viaggio che WeRoad equipaggia con tutti gli strumenti per farvi passare 5 giorni indimenticabili."
+            },
+            {
+                question: "Cosa include la cassa comune WeRoad?",
+                answers: ["Solo i pasti", "Attività extra, mance generali, trasporti locali, tasse e quota coordinatore", "Solo le mance", "Voli e hotel"],
+                correct: 1,
+                explanation: "La cassa comune include: attività extra scelte dal gruppo, tasse e pedaggi, trasporti locali, mance generali per autisti e guide, e la quota del coordinatore. NON include pasti (a meno che non siano menù fissi di gruppo)."
+            },
+            {
+                question: "Quale SPF dovrebbe avere la crema solare per l'Egitto?",
+                answers: ["SPF 15", "SPF 30", "SPF 50+", "Non serve crema solare"],
+                correct: 2,
+                explanation: "È ESSENZIALE portare crema solare SPF 50+ (TANTA!) perché il sole del deserto è molto intenso anche a gennaio."
+            },
+            {
+                question: "È possibile fare il check-in online per il volo di ritorno?",
+                answers: ["Sì, sempre", "No, deve essere fatto in aeroporto", "Solo con alcune compagnie", "Solo per business class"],
+                correct: 1,
+                explanation: "NON è possibile fare il check-in online per il volo di ritorno. Tutti i check-in devono essere effettuati in aeroporto. Arrivare ALMENO 3 ORE PRIMA."
+            },
+            {
+                question: "Qual è l'abbigliamento corretto per visitare le moschee?",
+                answers: ["Qualsiasi abbigliamento va bene", "Solo abiti bianchi", "Donne: sciarpa per testa e spalle coperte, pantaloni/gonne lunghe", "È vietato l'ingresso ai turisti"],
+                correct: 2,
+                explanation: "Per le moschee è OBBLIGATORIO che le donne coprano testa e spalle con sciarpa e indossino pantaloni/gonne lunghe. Gli uomini devono indossare pantaloni lunghi."
+            },
+            {
+                question: "Cosa NON è incluso nel pacchetto WeRoad?",
+                answers: ["Colazioni in hotel", "Pasti (pranzi e cene)", "Guida locale alle Piramidi", "Assicurazione medico-bagaglio"],
+                correct: 1,
+                explanation: "I pasti (4 pranzi e 4 cene) NON sono inclusi nel pacchetto. Sono incluse solo le colazioni in hotel."
+            },
+            {
+                question: "Come si chiama il sistema di mance obbligatorio in Egitto?",
+                answers: ["Tip", "Bakshish", "Servizio", "Propina"],
+                correct: 1,
+                explanation: "Il Bakshish (o Baksheesh) è il sistema di mance tradizionale egiziano ed è considerato obbligatorio. Porta banconote piccole in USD (1-5 USD)."
+            },
+            {
+                question: "Quale acqua si può bere in Egitto?",
+                answers: ["Acqua del rubinetto", "Solo acqua in bottiglia sigillata", "Qualsiasi acqua filtrata", "Acqua della fontana"],
+                correct: 1,
+                explanation: "Bevi SOLO acqua in bottiglia sigillata, mai dal rubinetto! Porta una borraccia riutilizzabile da riempire con acqua in bottiglia. È ESSENZIALE per il clima desertico."
+            },
+            {
+                question: "Quale SIM locale è consigliata per il viaggio?",
+                answers: ["Telecom Italia", "Orange o Vodafone", "Iliad", "Non serve SIM locale"],
+                correct: 1,
+                explanation: "È FORTEMENTE CONSIGLIATA una SIM locale Orange o Vodafone, acquistabile in aeroporto. Il WiFi in hotel è spesso scarso e molti locali non hanno WiFi."
+            },
+            {
+                question: "Gli ingressi interni alle piramidi sono inclusi nel tour?",
+                answers: ["Sì, tutti inclusi", "No, sono a pagamento extra", "Solo la Piramide di Cheope", "Sono gratuiti per tutti"],
+                correct: 1,
+                explanation: "Gli ingressi INTERNI alle piramidi NON sono inclusi e sono a pagamento extra (possono essere coperti dalla cassa comune)."
+            },
+            {
+                question: "Quale tipo di scarpe è ESSENZIALE portare?",
+                answers: ["Scarpe eleganti", "Infradito", "Scarpe da trekking pesanti", "Scarpe comodissime da camminata"],
+                correct: 3,
+                explanation: "Scarpe comodissime da camminata sono FONDAMENTALI! Camminerai molto tra piramidi, templi e mercati."
+            },
+            {
+                question: "Da quale percentuale del prezzo si inizia a contrattare nei mercati?",
+                answers: ["90% del prezzo", "50% del prezzo", "1/3 del prezzo richiesto", "Non si contratta mai"],
+                correct: 2,
+                explanation: "La contrattazione è parte della cultura! Inizia offrendo 1/3 del prezzo richiesto e negozia. La tecnica 'walk away' funziona quasi sempre!"
+            },
+            {
+                question: "Quale documento è necessario per entrare in Egitto?",
+                answers: ["Solo la patente", "Passaporto valido (min. 6 mesi) o documento di identità a specifiche condizioni", "Carta d'identità europea", "Tessera sanitaria"],
+                correct: 1,
+                explanation: "È necessario un passaporto valido (minimo 6 mesi dalla data di rientro) oppure un documento di identità valido a specifiche condizioni. Verifica sul sito dell'Ambasciata."
+            },
+            {
+                question: "Quando viene comunicato il nome dell'hotel?",
+                answers: ["Al momento della prenotazione", "Un mese prima", "Negli ultimi giorni/48h prima della partenza", "Mai"],
+                correct: 2,
+                explanation: "Il nome dell'hotel viene comunicato generalmente negli ultimi giorni prima della partenza, in alcuni casi anche solo 48 ore prima. Questo è normale nella gestione dei tour di gruppo."
+            },
+            {
+                question: "Cosa bisogna fare prima di prendere un taxi al Cairo?",
+                answers: ["Salire e basta", "Pattuire SEMPRE la tariffa prima di partire", "Chiedere il tassametro", "Chiamare la polizia"],
+                correct: 1,
+                explanation: "Pattuisci SEMPRE la tariffa prima di partire! Usa preferibilmente taxi ufficiali, Uber o Careem. I tassametri spesso non vengono usati."
+            },
+            {
+                question: "Qual è lo spirito di un viaggio WeRoad?",
+                answers: ["Visitare solo monumenti turistici", "Conoscere il luogo E la gente che ti accompagna", "Stare sempre da soli", "Seguire una guida rigida"],
+                correct: 1,
+                explanation: "Lo spirito WeRoad è conoscere il luogo MA ANCHE la gente che ti accompagna, che darà un sapore particolare e unico all'itinerario. Ogni viaggio è diverso, ma anche ogni gruppo lo è!"
+            },
+            {
+                question: "Qual è il numero massimo di persone in un gruppo WeRoad?",
+                answers: ["5 persone", "10 persone", "15 persone", "30 persone"],
+                correct: 2,
+                explanation: "I gruppi WeRoad sono piccoli, con un massimo di 15 persone, per garantire esperienze autentiche e creare una vera community di viaggiatori."
+            },
+            {
+                question: "Quando si paga la cassa comune?",
+                answers: ["Prima della partenza online", "All'inizio del tour durante il primo incontro", "Alla fine del viaggio", "Non si paga mai"],
+                correct: 1,
+                explanation: "La cassa comune si paga al coordinatore all'inizio del tour, durante il primo incontro di benvenuto, in moneta locale. Così il coordinatore se ne occupa e tu ti rilassi!"
+            }
+        ];
+
+        let currentPracticalQuestionIndex = 0;
+        let practicalQuizScore = 0;
+        let selectedPracticalAnswer = null;
+
+        function startPracticalQuiz() {
+            currentPracticalQuestionIndex = 0;
+            practicalQuizScore = 0;
+            selectedPracticalAnswer = null;
+            document.getElementById('quiz-practical-start').classList.add('hidden');
+            document.getElementById('quiz-practical-questions').classList.remove('hidden');
+            showPracticalQuestion();
+        }
+
+        function showPracticalQuestion() {
+            const question = practicalQuizQuestions[currentPracticalQuestionIndex];
+            document.getElementById('current-question-practical').textContent = currentPracticalQuestionIndex + 1;
+            document.getElementById('score-practical').textContent = practicalQuizScore;
+            document.getElementById('question-text-practical').textContent = question.question;
+            document.getElementById('feedback-practical').classList.add('hidden');
+            document.getElementById('next-button-practical').classList.add('hidden');
+            selectedPracticalAnswer = null;
+
+            const answersContainer = document.getElementById('answers-container-practical');
+            answersContainer.innerHTML = question.answers.map((answer, index) => `
+                <button 
+                    onclick="selectPracticalAnswer(${index})" 
+                    class="answer-button-practical w-full text-left p-3 rounded-lg border-2 border-gray-300 hover:border-green-500 transition-all text-sm"
+                    data-index="${index}"
+                >
+                    ${answer}
+                </button>
+            `).join('');
+        }
+
+        function selectPracticalAnswer(index) {
+            if (selectedPracticalAnswer !== null) return;
+            
+            selectedPracticalAnswer = index;
+            const question = practicalQuizQuestions[currentPracticalQuestionIndex];
+            const isCorrect = index === question.correct;
+            
+            if (isCorrect) {
+                practicalQuizScore++;
+                document.getElementById('score-practical').textContent = practicalQuizScore;
+            }
+
+            const buttons = document.querySelectorAll('.answer-button-practical');
+            buttons.forEach((button, i) => {
+                button.disabled = true;
+                if (i === question.correct) {
+                    button.classList.remove('border-gray-300');
+                    button.classList.add('border-green-500', 'bg-green-50');
+                } else if (i === index && !isCorrect) {
+                    button.classList.remove('border-gray-300');
+                    button.classList.add('border-red-500', 'bg-red-50');
+                } else {
+                    button.classList.add('opacity-50');
+                }
+            });
+
+            const feedback = document.getElementById('feedback-practical');
+            const feedbackText = document.getElementById('feedback-text-practical');
+            const explanationText = document.getElementById('explanation-text-practical');
+            
+            feedback.classList.remove('hidden', 'bg-green-50', 'bg-red-50');
+            if (isCorrect) {
+                feedback.classList.add('bg-green-50');
+                feedbackText.textContent = '✅ Corretto!';
+                feedbackText.className = 'text-sm font-semibold text-green-700';
+            } else {
+                feedback.classList.add('bg-red-50');
+                feedbackText.textContent = '❌ Sbagliato!';
+                feedbackText.className = 'text-sm font-semibold text-red-700';
+            }
+            
+            explanationText.textContent = question.explanation;
+            explanationText.className = 'text-xs mt-2 text-gray-700';
+            
+            document.getElementById('next-button-practical').classList.remove('hidden');
+        }
+
+        function nextPracticalQuestion() {
+            currentPracticalQuestionIndex++;
+            
+            if (currentPracticalQuestionIndex < practicalQuizQuestions.length) {
+                showPracticalQuestion();
+            } else {
+                showPracticalResults();
+            }
+        }
+
+        function showPracticalResults() {
+            document.getElementById('quiz-practical-questions').classList.add('hidden');
+            document.getElementById('quiz-practical-results').classList.remove('hidden');
+            document.getElementById('final-score-practical').textContent = practicalQuizScore;
+            
+            const percentage = (practicalQuizScore / practicalQuizQuestions.length) * 100;
+            const resultEmoji = document.getElementById('result-emoji-practical');
+            const resultMessage = document.getElementById('result-message-practical');
+            
+            if (percentage === 100) {
+                resultEmoji.textContent = '🏆';
+                resultMessage.textContent = 'Perfetto! Sei pronto al 100% per il Cairo Express! 🎒✈️';
+            } else if (percentage >= 80) {
+                resultEmoji.textContent = '🎉';
+                resultMessage.textContent = 'Eccellente! Sei quasi pronto, rileggi qualche info e sei a posto! 👍';
+            } else if (percentage >= 60) {
+                resultEmoji.textContent = '📚';
+                resultMessage.textContent = 'Buon lavoro! Leggi meglio le sezioni Info Utili e Cosa Portare! 📖';
+            } else if (percentage >= 40) {
+                resultEmoji.textContent = '⚠️';
+                resultMessage.textContent = 'Attenzione! Devi studiare meglio la guida prima di partire! 🔍';
+            } else {
+                resultEmoji.textContent = '🚨';
+                resultMessage.textContent = 'Urgente! Leggi TUTTA la pagina prima di partire! Non sei ancora pronto! 📋';
+            }
+        }
+
+        function restartPracticalQuiz() {
+            document.getElementById('quiz-practical-results').classList.add('hidden');
+            document.getElementById('quiz-practical-start').classList.remove('hidden');
+        }
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b227d060755ed2b',t:'MTc2NjQzNjU5My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b5a62c1c52cee81',t:'MTc2NzAyMjcyMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
