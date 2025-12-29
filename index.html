@@ -70,65 +70,13 @@
   <div class="container mx-auto px-4 py-4 pb-8"><!-- Search Bar -->
    <div class="mb-6">
     <div class="card-egypt rounded-xl overflow-hidden max-w-lg mx-auto p-4">
-     <div class="relative"><input type="text" id="search-input" placeholder="���� Cerca info... (es. visto, temperature, mance)" class="w-full px-4 py-3 pr-10 rounded-lg border-2 border-gold focus:outline-none focus:border-gold text-sm" style="font-family: 'Montserrat', sans-serif;"> <button id="clear-search" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gold hidden" onclick="clearSearch()"> ✕ </button>
+     <div class="relative"><input type="text" id="search-input" placeholder=" Cerca info... (es. visto, temperature, mance)" class="w-full px-4 py-3 pr-10 rounded-lg border-2 border-gold focus:outline-none focus:border-gold text-sm" style="font-family: 'Montserrat', sans-serif;"> <button id="clear-search" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gold hidden" onclick="clearSearch()"> ✕ </button>
      </div>
      <div id="search-results" class="mt-3 hidden">
       <div class="text-xs text-gray-600 mb-2 font-semibold">
        Risultati:
       </div>
       <div id="results-container" class="space-y-2 max-h-48 overflow-y-auto"></div>
-     </div>
-    </div>
-   </div><!-- WeRoad Intro Section -->
-   <div class="mb-8 max-w-5xl mx-auto">
-    <div class="card-egypt rounded-xl overflow-hidden p-6">
-     <h2 class="text-2 font-bold text-primary title-font mb-4 text-center">🐪 WeRoad in a Nutshell</h2>
-     <div class="space-y-4">
-       <h3 class="font-semibold text-primary mb-2 title-font flex items-center"><span class="text-2xl mr-2">🤔</span> Prima volta con WeRoad?</h3>
-       <p class="text-sm text-gray-700 leading-relaxed mb-3">Allora ti sarà utile sapere come funziona e cosa aspettarti:</p>
-       <p class="text-sm text-gray-700 leading-relaxed mb-3">WeRoad propone diversi tipi di viaggio e noi abbiamo scelto uno dei più intensi: il <strong>Cairo Express</strong>. Questi viaggi sono pieni di avventure ed esperienze straordinarie. 5 giorni di pura scoperta tra piramidi millenarie, mercati colorati e la frenetica vita del Cairo! 🔺✨</p>
-       <p class="text-sm text-gray-700 leading-relaxed mb-3">Da queste parti ci piace conoscere il luogo, ma anche la gente che ci accompagna, che darà un sapore particolare e unico all'itinerario: ogni viaggio è diverso, ma anche ogni gruppo lo è! 🌍💬</p>
-       <p class="text-sm text-gray-700 leading-relaxed">Nello spirito della scoperta, anche il coordinatore è uno di voi, un compagno di viaggio. Ben lontano dall'essere una semplice guida, è tanto gasato quanto voi, con la differenza che WeRoad gli fornisce tutti gli strumenti per farvi passare 5 giorni indimenticabili e al tempo stesso farvi dimenticare di tutto il resto. 🚶‍♀️🎉</p>
-       <p class="text-sm text-gray-700 leading-relaxed mt-3 italic">Questo è lo spirito WeRoad, ma se hai ancora domande... sai dove trovarmi! 👋💌</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <h3 class="font-semibold text-primary mb-3 title-font flex items-center"><span class="text-2xl mr-2">💫</span> I Valori WeRoad</h3>
-        <ul class="text-sm text-gray-700 space-y-2">
-         <li class="flex items-start"><span class="mr-2">🌱</span> <span>Viaggi autentici e sostenibili</span></li>
-         <li class="flex items-start"><span class="mr-2">👥</span> <span>Gruppi piccoli (max 15 persone)</span></li>
-         <li class="flex items-start"><span class="mr-2">🏛️</span> <span>Esperienze locali genuine</span></li>
-         <li class="flex items-start"><span class="mr-2">❤️</span> <span>Community di viaggiatori appassionati</span></li>
-        </ul>
-       </div>
-       <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-4 rounded-lg border-2 border-gold">
-        <h3 class="font-semibold text-primary mb-3 title-font flex items-center"><span class="text-2xl mr-2">🐪</span> Cairo Express</h3>
-        <p class="text-sm text-gray-700 mb-3">Un'avventura di <strong>5 giorni</strong> alla scoperta della terra dei faraoni 👑. Dalle maestose Piramidi di Giza alle moschee del Cairo islamico 🕌, dai tesori dei musei ai mercati vivaci 🛍️.</p>
-       </div>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-       <div class="bg-purple-50 p-4 rounded-lg border-2 border-gold">
-        <h3 class="font-semibold text-primary mb-3 title-font">✨ Highlights</h3>
-        <ul class="text-sm text-gray-700 space-y-1">
-         <li>🔺 Grande Piramide di Cheope e Sfinge</li>
-         <li>🕌 Moschea Al-Azhar e Via Islamica</li>
-         <li>🏛️ Cittadella di Saladino</li>
-         <li>⛪ Cairo Copto (quartiere cristiano)</li>
-         <li>🛍��� Khan el-Khalili Bazaar</li>
-         <li>🏺 Opzionale: GEM Museum e Saqqara</li>
-        </ul>
-       </div>
-       <div class="bg-green-50 p-3 rounded-lg border-2 border-gold">
-        <h3 class="text-sm font-semibold text-primary mb-2 title-font">🎯 Esperienze</h3>
-        <ul class="text-xs text-gray-700 space-y-1">
-         <li>🍽️ Cucina egiziana autentica</li>
-         <li>🐪 Giro in cammello nel deserto</li>
-         <li>⛵ Navigazione in feluca sul Nilo</li>
-         <li>🛍️ Contrattazione nei mercati</li>
-         <li>🏜️ Quad nel deserto (opzionale)</li>
-         <li>🎭 Cultura e tradizioni millenarie</li>
-        </ul>
-       </div>
-      </div>
      </div>
     </div>
    </div><!-- Countdown -->
@@ -172,6 +120,26 @@
       </div>
      </div>
     </div>
+   </div><!-- WeRoad Intro Section -->
+   <div class="mb-8 max-w-5xl mx-auto">
+    <div class="card-egypt rounded-xl overflow-hidden p-6">
+     <h2 class="text-2 font-bold text-primary title-font mb-4 text-center">🐪 WeRoad in a Nutshell</h2>
+     <div class="space-y-4">
+       <h3 class="font-semibold text-primary mb-2 title-font flex items-center"><span class="text-2xl mr-2">🤔</span> Prima volta con WeRoad?</h3>
+       <p class="text-sm text-gray-700 leading-relaxed mb-3">Allora ti sarà utile sapere come funziona e cosa aspettarti:</p>
+       <p class="text-sm text-gray-700 leading-relaxed mb-3">WeRoad propone diversi tipi di viaggio e noi abbiamo scelto uno dei più interessanti: il <strong>Cairo Express</strong>. Questi viaggi sono pieni di avventure ed esperienze straordinarie. 5 giorni di pura scoperta tra piramidi millenarie, mercati colorati e la frenetica vita del Cairo! 🔺✨</p>
+       <p class="text-sm text-gray-700 leading-relaxed mb-3">Da queste parti ci piace conoscere il luogo, ma anche la gente che ci accompagna, che darà un sapore particolare e unico all'itinerario: ogni viaggio è diverso, ma anche ogni gruppo lo è! 🌍💬</p>
+       <p class="text-sm text-gray-700 leading-relaxed">Nello spirito della scoperta, anche il coordinatore è uno di voi, un compagno di viaggio. Ben lontano dall'essere una semplice guida, è tanto gasato quanto voi, con la differenza che WeRoad gli fornisce tutti gli strumenti per farvi passare 5 giorni indimenticabili e al tempo stesso farvi dimenticare di tutto il resto. 🚶‍♀️🎉</p>
+       <p class="text-sm text-gray-700 leading-relaxed mt-3 italic">Questo è lo spirito WeRoad, ma se hai ancora domande... sai dove trovarmi! 👋💌</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <h3 class="font-semibold text-primary mb-3 title-font flex items-center"><span class="text-2xl mr-2">💫</span> I Valori WeRoad</h3>
+        <ul class="text-sm text-gray-700 space-y-2">
+         <li class="flex items-start"><span class="mr-2">🌱</span> <span>Viaggi autentici e sostenibili</span></li>
+         <li class="flex items-start"><span class="mr-2">👥</span> <span>Gruppi piccoli (max 15 persone)</span></li>
+         <li class="flex items-start"><span class="mr-2">🏛️</span> <span>Esperienze locali genuine</span></li>
+         <li class="flex items-start"><span class="mr-2">❤️</span> <span>Community di viaggiatori appassionati</span></li>
+        </ul>
    </div><!-- Main Grid -->
    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-8"><!-- Itinerario -->
     <div class="card-egypt rounded-lg p-3 cursor-pointer" onclick="openSection('itinerario')">
